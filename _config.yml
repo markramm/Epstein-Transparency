@@ -1,0 +1,20 @@
+theme: minima
+title: Epstein Files Discharge Petition Tracker
+description: Tracking progress toward 218 signatures for transparency with victim protections
+url: https://markramm.github.io
+baseurl: /Epstein-Transparency
+
+# Social links
+twitter_username: 
+github_username: markramm
+
+# Build settings
+markdown: kramdown
+
+# Exclude from build
+exclude:
+  - README.md
+  - LICENSE
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - .github/
