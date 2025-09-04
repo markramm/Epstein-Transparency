@@ -79,9 +79,10 @@ With 212 total Democrats in the House and 211 signed, there's likely 1 Democrat 
 - Concern about conspiracy theory association
 
 ### The Gender Pattern:
-- **Women who signed:** Mace, Greene, Boebert (3/3 approached)
-- **Men who signed:** Only Massie (1/200+)
-- Clear gender divide on courage vs. caution
+- **GOP Women who signed:** Mace, Greene, Boebert (3 out of ~31 GOP women = ~10%)
+- **GOP Men who signed:** Only Massie (1 out of ~189 GOP men = ~0.5%)
+- Still a notable gender gap, but not as dramatic as initially stated
+- **Key fact:** 28 Republican women have NOT signed yet
 
 ## Strategic Notes
 
