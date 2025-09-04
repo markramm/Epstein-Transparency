@@ -167,7 +167,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // Update last updated time
 function updateDateTime() {
     const now = new Date();
-    const formatted = now.toLocaleDateString('en-US', {
+    const formatted = now.toLocaleString('en-US', {
+        timeZone: 'America/New_York',
         month: 'short',
         day: 'numeric',
         year: 'numeric',
@@ -178,6 +179,12 @@ function updateDateTime() {
     const updateElement = document.getElementById('update-time');
     if (updateElement) {
         updateElement.textContent = formatted;
+    }
+    
+    // Update count timestamp
+    const countTimestamp = document.getElementById('count-timestamp');
+    if (countTimestamp) {
+        countTimestamp.textContent = `As of ${formatted} ET`;
     }
 }
 

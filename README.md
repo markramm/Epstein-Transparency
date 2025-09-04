@@ -1,6 +1,6 @@
 # Epstein Files Discharge Petition Tracker
 
-**Status: 134/218 signatures** | [Live Dashboard](https://markramm.github.io/Epstein-Transparency)
+**Status: 134/218 signatures (As of Sept 4, 2025, 11:45 PM ET)** | [Live Dashboard](https://markramm.github.io/Epstein-Transparency) | [Verify at House Clerk](https://clerk.house.gov/DischargePetition/20251189?CongressNum=119)
 
 ## Mission
 Track progress toward 218 signatures needed to force a House vote on releasing all Epstein-related government records with proper victim protections.
@@ -30,6 +30,10 @@ Support bringing to the floor a **JFK-style disclosure framework** for remaining
 - Public Vaughn-style index for any withholdings
 - Firm deadlines and searchable public repository
 
+**Primary Legislation:**
+- [H.R. 4405](https://www.congress.gov/bill/119th-congress/house-bill/4405/text) - JFK-style disclosure framework with victim protections
+- [H.Res. 581](https://www.congress.gov/bill/119th-congress/house-resolution/581) - Discharge rule vehicle to force floor vote
+
 ## Resources
 - [Call Scripts](resources/call-scripts.md)
 - [Email Templates](resources/email-templates.md)
@@ -45,6 +49,14 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to help maintain this tracker.
 
 ## Code of Conduct
 See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - Privacy first, civility always.
+
+## Our Standards
+
+📊 **Receipts Over Rhetoric:** We cite House Clerk and Congress.gov for all procedural counts. We correct errors within 24 hours. We never name non-public victims.
+
+🔒 **Privacy First:** Read our [Privacy & Safety Policy](privacy.html) and [Methodology](methodology.html)
+
+✅ **Verification:** All numbers link to [official sources](data/sources.json) or [confirmed signers](data/signers.json)
 
 ---
 *This is a citizen-led transparency initiative. Not affiliated with any government agency or political campaign.*

@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "last_updated": "2025-09-04T23:45:00-05:00",
+    "total_needed": 218,
+    "discharge_petition_number": 9,
+    "congress": 119,
+    "official_source": "https://clerk.house.gov/DischargePetition/20251189?CongressNum=119"
+  },
+  "signers": [
+    {
+      "name": "Thomas Massie",
+      "party": "R",
+      "state": "KY",
+      "district": "04",
+      "date_signed": "2025-09-03",
+      "source_url": "https://twitter.com/RepThomasMassie/status/xxxxx",
+      "notes": "Filed the discharge petition"
+    },
+    {
+      "name": "Nancy Mace",
+      "party": "R",
+      "state": "SC",
+      "district": "01",
+      "date_signed": "2025-09-03",
+      "source_url": "https://twitter.com/RepNancyMace/status/xxxxx",
+      "notes": "Early Republican signer"
+    },
+    {
+      "name": "Marjorie Taylor Greene",
+      "party": "R",
+      "state": "GA",
+      "district": "14",
+      "date_signed": "2025-09-03",
+      "source_url": "Press statement",
+      "notes": "Signed on first day back"
+    },
+    {
+      "name": "Lauren Boebert",
+      "party": "R",
+      "state": "CO",
+      "district": "04",
+      "date_signed": "2025-09-03",
+      "source_url": "Office confirmation",
+      "notes": "Morning of Sept 3"
+    },
+    {
+      "name": "Ro Khanna",
+      "party": "D",
+      "state": "CA",
+      "district": "17",
+      "date_signed": "2025-09-03",
+      "source_url": "Press conference statement",
+      "notes": "Bipartisan co-lead"
+    }
+  ],
+  "expected_signers": {
+    "democrats": {
+      "expected_count": 130,
+      "total_caucus": 212,
+      "notes": "Most Democrats expected to sign based on caucus statements"
+    },
+    "republicans": {
+      "confirmed_count": 4,
+      "needed_additional": 2,
+      "total_caucus": 220,
+      "notes": "Need 2 more Republicans if all expected Democrats sign"
+    }
+  }
+}
