@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
     background: var(--bg-color);
@@ -176,6 +180,7 @@ header h1 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    overflow-x: hidden;
 }
 
 /* Hero Comparison Layout */
@@ -184,7 +189,9 @@ header h1 {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
-    align-items: start;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Two Column Layout for Targets */
@@ -205,6 +212,8 @@ header h1 {
     gap: 1.5rem;
     position: sticky;
     top: 2rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
 }
 
 .side-column .card {
@@ -262,8 +271,9 @@ header h1 {
     margin: 2rem auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+    align-items: stretch;
 }
 
 .card {
@@ -272,6 +282,12 @@ header h1 {
     padding: 1.75rem;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     border: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .card h3 {
@@ -518,6 +534,8 @@ footer a {
 
 .amplify-info {
     margin-bottom: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .survivor-quote {
@@ -532,6 +550,8 @@ footer a {
 
 .search-links {
     margin: 1.5rem 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .search-links h4 {
@@ -579,13 +599,17 @@ footer a {
     margin: 1.5rem 0;
     padding-top: 1rem;
     border-top: 2px solid var(--border-color);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .rep-search-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 0.5rem;
     margin-top: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .rep-search-btn {
@@ -1225,12 +1249,16 @@ footer {
 .courage-card {
     background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
     border: 2px solid #27ae60;
+    height: 100%;
+    min-height: 400px;
 }
 
 /* Pressure Section */
 .pressure-card {
     background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
     border: 2px solid #e74c3c;
+    height: 100%;
+    min-height: 400px;
 }
 
 .courage-card h3 {
@@ -1361,6 +1389,15 @@ footer {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+    
+    .rep-search-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .search-btn {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1373,7 +1410,26 @@ footer {
     }
     
     .main-content {
+        padding: 0 1rem;
+        gap: 1.5rem;
         grid-template-columns: 1fr;
+    }
+    
+    .card {
+        padding: 1.25rem;
+    }
+    
+    .courage-card, .pressure-card {
+        min-height: auto;
+    }
+    
+    .rep-search-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-btn, .rep-search-btn {
+        width: 100%;
+        text-align: center;
     }
     
     .modal-content {
