@@ -80,27 +80,30 @@ All critical issues have been resolved. The site is ready for public launch.
 ## 📝 Launch Announcement Template
 
 ```
-🚨 LAUNCH: Epstein Files Discharge Petition Tracker
+🇺🇸 Democrats and Republicans Standing Together for Truth
 
-We need just 84 more signatures to force a House vote on releasing ALL Epstein files with survivor protections.
+134 members of Congress from BOTH parties are united on something remarkable:
+Giving Epstein survivors the truth they're asking for - with dignity and privacy protected.
+
+We need just 84 more signatures (only 2 more Republicans if all Democrats sign).
 
 Track progress: https://markramm.github.io/Epstein-Transparency/
 
-Current: 134/218 signatures
-- 4 Republicans signed (Massie, Mace, Greene, Boebert)
-- Nancy Mace left survivor meeting in tears, still signed
-- Jeff Van Drew CO-SPONSORED but won't sign
+What unites us:
+✓ Survivors deserve to be heard
+✓ Children must be protected  
+✓ Truth defeats darkness
+✓ Justice transcends politics
 
-Features:
-✓ Live signature tracking
-✓ Contact your representative
-✓ Pre-written scripts & emails
-✓ Survivor stories (with consent)
-✓ FAQ with sources
+Republicans who already signed: Massie, Mace, Greene, Boebert
+Democrats ready to sign: 130+
 
-This is bipartisan. This is about survivors. This is about truth.
+This isn't about party - it's about people.
+This isn't about politics - it's about principles.
 
-#EpsteinFiles #DischargetePetition
+Join Americans from both parties standing with survivors.
+
+#AmericansUnited #TruthWithDignity #BipartisanCourage
 ```
 
 ## ⚠️ Post-Launch Monitoring
@@ -111,14 +114,34 @@ This is bipartisan. This is about survivors. This is about truth.
 4. **Social mentions** - Track hashtags and responses
 5. **Media coverage** - Document all press mentions
 
+## 🤝 Unity Message Guidelines
+
+**DO:**
+- Celebrate Republicans who signed (Mace, MTG, Boebert, Massie)
+- Thank Democrats for being ready to sign
+- Focus on shared values (protecting children, truth, justice)
+- Use "Democrats and Republicans together"
+- Emphasize "Americans united"
+
+**DON'T:**
+- Attack Republicans who haven't signed yet
+- Make it a partisan victory for either side
+- Use divisive language
+- Focus on blame or shame
+- Claim credit for one party
+
+**Key Phrase:** "This is Democrats and Republicans standing together to give victims what they're asking for - the whole truth about what was done to them."
+
 ## 💪 Strengths Going Into Launch
 
-1. **Moral clarity** - Survivor-centered, not conspiracy-focused
-2. **Bipartisan framing** - Republicans and Democrats united
-3. **Concrete action** - Clear steps for users to take
-4. **Professional presentation** - No typos, working features
-5. **Emotional resonance** - Nancy Mace story is powerful
-6. **Factual accuracy** - All claims sourced and verified
+1. **Unity message** - Democrats and Republicans working together
+2. **Moral clarity** - Survivor-centered, not conspiracy-focused
+3. **Bipartisan reality** - 4 Republicans already signed, 130 Democrats ready
+4. **Shared values** - Focus on what unites all Americans
+5. **Concrete action** - Clear steps for users to take
+6. **Professional presentation** - No typos, working features
+7. **Emotional resonance** - Nancy Mace story shows courage transcends party
+8. **Factual accuracy** - All claims sourced and verified
 
 ## 🔄 Quick Update Process
 
