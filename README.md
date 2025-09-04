@@ -16,7 +16,7 @@ Need 84 more signatures (2 Republicans if all Democrats sign)
 
 ## How to Help
 
-1. **Call your representative** - Use our [call scripts](resources/call-scripts.md)
+1. **Call your representative** - Use our [Complete Contact Guide](contact-your-rep.html) with scripts & tips
 2. **Share on social media** - Use #EpsteinFilesPetition
 3. **Report responses** - Submit office responses via [Issues](https://github.com/markramm/Epstein-Transparency/issues/new/choose)
 4. **Submit media coverage** - Help us track press mentions
