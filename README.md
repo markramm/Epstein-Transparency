@@ -1,12 +1,12 @@
 # Epstein Files Discharge Petition Tracker
 
-**Status: 134/218 signatures (As of Sept 4, 2025, 11:45 PM ET)** | [Live Dashboard](https://markramm.github.io/Epstein-Transparency) | [Verify at House Clerk](https://clerk.house.gov/DischargePetition/20251189?CongressNum=119)
+**Status: 215/218 signatures (As of Sept 4, 2025, 11:59 PM ET)** | [Live Dashboard](https://markramm.github.io/Epstein-Transparency) | [Verify at House Clerk](https://clerk.house.gov/DischargePetition/2025090209)
 
 ## Mission
 Track progress toward 218 signatures needed to force a House vote on releasing all Epstein-related government records with proper victim protections.
 
-## Current Focus
-Need 84 more signatures (2 Republicans if all Democrats sign)
+## 🚨 BREAKING: ONLY 3 SIGNATURES AWAY! 🚨
+Need just 3 more signatures to force a vote!
 
 ### Priority Targets
 - **Young Kim (CA-40)**: 202-225-4111 | [@RepYoungKim](https://twitter.com/RepYoungKim)

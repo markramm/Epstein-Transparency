@@ -3,7 +3,7 @@
 // Configuration
 const PETITION_START_TIME = new Date('2025-09-03T10:00:00-04:00'); // Sept 3, 2025, 10 AM ET
 const TOTAL_NEEDED = 218;
-const CURRENT_SIGNATURES = 134;
+const CURRENT_SIGNATURES = 215; // BREAKING: Only 3 signatures away!
 
 // Representative data
 const representatives = [

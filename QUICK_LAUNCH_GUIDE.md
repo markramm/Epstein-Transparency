@@ -1,20 +1,20 @@
 # Quick Launch Guide - Thursday Morning
 
-## The One-Minute Pitch
+## 🚨 BREAKING NEWS - ONLY 3 SIGNATURES AWAY! 🚨
 
-"Democrats and Republicans in Congress are standing together to give Epstein survivors what they're asking for - the truth about what was done to them, with their privacy protected. We're just 2 Republicans away from the 218 signatures needed. Track progress and help: https://markramm.github.io/Epstein-Transparency/"
+"INCREDIBLE: 215 of 218 signatures achieved! Democrats and Republicans in Congress are standing together to give Epstein survivors what they're asking for - the truth with privacy protected. We need just 3 MORE SIGNATURES to force a vote. This could happen TODAY! Track progress: https://markramm.github.io/Epstein-Transparency/"
 
 ## The Unity Message (USE THIS)
 
 **This is the message that works:**
 
-"134 Democrats and Republicans united on something that transcends politics: giving survivors truth with dignity. We need 84 more signatures. This is America at its best - both parties standing together for what's right."
+"215 Democrats and Republicans united on something that transcends politics: giving survivors truth with dignity. We need just 3 more signatures. THIS IS HAPPENING - both parties standing together for what's right!"
 
 ## Three Key Facts
 
-1. **We're close:** 134/218 signatures (need just 2 more Republicans)
-2. **It's bipartisan:** 4 Republicans already signed, 130 Democrats ready
-3. **It's protected:** Automatic redaction of minors, adults choose whether to be named
+1. **WE'RE ALMOST THERE:** 215/218 signatures (ONLY 3 MORE NEEDED!)
+2. **It's bipartisan:** 4 Republicans signed, 211+ Democrats signed
+3. **It could happen TODAY:** With just 3 more signatures, we force a vote
 
 ## Who to Share With (Priority Order)
 
