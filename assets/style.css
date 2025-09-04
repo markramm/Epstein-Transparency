@@ -270,8 +270,18 @@ header h1 {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.two-column-bottom {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: stretch;
 }
@@ -1390,6 +1400,11 @@ footer {
         gap: 1.5rem;
     }
     
+    .two-column-bottom {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
     .rep-search-grid {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
@@ -1412,6 +1427,9 @@ footer {
     .main-content {
         padding: 0 1rem;
         gap: 1.5rem;
+    }
+    
+    .two-column-bottom {
         grid-template-columns: 1fr;
     }
     
