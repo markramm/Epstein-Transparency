@@ -3,7 +3,7 @@
 // Configuration - Will be loaded from signers.json
 let PETITION_START_TIME = new Date('2025-09-03T10:00:00-04:00'); // Sept 3, 2025, 10 AM ET
 let TOTAL_NEEDED = 218;
-let CURRENT_SIGNATURES = 215; // Default values, will be updated from JSON
+let CURRENT_SIGNATURES = 217; // Default values, will be updated from JSON (216 + Walkinshaw pledged)
 
 // Representative data
 const representatives = [
