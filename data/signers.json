@@ -1,14 +1,16 @@
 {
   "metadata": {
-    "last_updated": "2025-09-10T14:30:00.000000",
-    "total_signatures": 217,
+    "last_updated": "2025-09-10T15:00:00.000000",
+    "total_signatures": 216,
+    "total_confirmed": 216,
+    "total_pledged": 1,
     "total_needed": 218,
-    "signatures_remaining": 1,
+    "signatures_remaining": 2,
     "discharge_petition_number": 9,
     "congress": 119,
     "official_source": "https://clerk.house.gov/DischargePetition/2025090209",
-    "note": "This is the canonical source for signature counts. Updated from House Clerk records.",
-    "last_scraped": "2025-09-04T16:58:14.176719"
+    "note": "216 confirmed signatures as of Sept 8, 2025. Most recent: Eric Swalwell (CA-14). Walkinshaw (VA-11) pledged to sign = 217 total.",
+    "last_scraped": "2025-09-10T15:00:00.000000"
   },
   "signers": [
     {
@@ -16,7 +18,7 @@
       "party": "R",
       "state": "KY",
       "district": "04",
-      "date_signed": "2025-09-03",
+      "date_signed": "2025-09-02",
       "source_url": "https://twitter.com/RepThomasMassie/status/xxxxx",
       "notes": "Filed the discharge petition"
     },
@@ -25,7 +27,7 @@
       "party": "R",
       "state": "SC",
       "district": "01",
-      "date_signed": "2025-09-03",
+      "date_signed": "2025-09-02",
       "source_url": "https://twitter.com/RepNancyMace/status/xxxxx",
       "notes": "Early Republican signer"
     },
@@ -34,7 +36,7 @@
       "party": "R",
       "state": "GA",
       "district": "14",
-      "date_signed": "2025-09-03",
+      "date_signed": "2025-09-02",
       "source_url": "Press statement",
       "notes": "Signed on first day back"
     },
@@ -43,7 +45,7 @@
       "party": "R",
       "state": "CO",
       "district": "04",
-      "date_signed": "2025-09-03",
+      "date_signed": "2025-09-02",
       "source_url": "Office confirmation",
       "notes": "Morning of Sept 3"
     },
@@ -52,7 +54,7 @@
       "party": "D",
       "state": "CA",
       "district": "17",
-      "date_signed": "2025-09-03",
+      "date_signed": "2025-09-02",
       "source_url": "Press conference statement",
       "notes": "Bipartisan co-lead"
     },
@@ -1955,9 +1957,10 @@
     },
     "republicans": {
       "confirmed_count": 4,
-      "needed_additional": 2,
+      "confirmed_signers": ["Thomas Massie (KY-04)", "Nancy Mace (SC-01)", "Lauren Boebert (CO-04)", "Marjorie Taylor Greene (GA-14)"],
+      "needed_additional": 1,
       "total_caucus": 220,
-      "notes": "Need 2 more Republicans if all expected Democrats sign"
+      "notes": "Need 1 more Republican with Walkinshaw pledge (216 + 1 = 217, need 218)"
     }
   }
 }

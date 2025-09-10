@@ -203,12 +203,12 @@
                 <div>Total Reps</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="confirmed-signed">4</div>
+                <div class="stat-number" id="confirmed-signed">216</div>
                 <div>Confirmed Signed</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="presumed-signed">211</div>
-                <div>Presumed Signed</div>
+                <div class="stat-number" id="expected-signed">0</div>
+                <div>Expected to Sign</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number" id="not-signed">220</div>
@@ -221,8 +221,8 @@
             
             <div class="filter-group">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="signed">Confirmed Signed</button>
-                <button class="filter-btn" data-filter="presumed">Presumed Signed</button>
+                <button class="filter-btn" data-filter="signed">Confirmed (216)</button>
+                <button class="filter-btn" data-filter="expected">Expected to Sign</button>
                 <button class="filter-btn" data-filter="not-signed">Not Signed</button>
                 <button class="filter-btn" data-filter="republican">Republican</button>
                 <button class="filter-btn" data-filter="democrat">Democrat</button>
@@ -253,6 +253,22 @@
         // Load and parse CSV data
         async function loadRepresentativeData() {
             try {
+                // Load confirmed signers first
+                const signersResponse = await fetch('data/confirmed-signers-sept10.csv');
+                const signersText = await signersResponse.text();
+                
+                // Parse confirmed signers
+                const confirmedSigners = new Set();
+                const signerLines = signersText.trim().split('\n');
+                for (let i = 1; i < signerLines.length; i++) {
+                    const values = parseCSVLine(signerLines[i]);
+                    if (values.length >= 4) {
+                        const key = `${values[1]}-${values[2]}-${values[3]}`;
+                        confirmedSigners.add(key);
+                    }
+                }
+                
+                // Load all representatives
                 const response = await fetch('data/complete-house-119th-congress.csv');
                 const csvText = await response.text();
                 
@@ -263,12 +279,26 @@
                 for (let i = 1; i < lines.length; i++) {
                     const values = parseCSVLine(lines[i]);
                     if (values.length >= 7) {
+                        const name = values[1] || '';
+                        const state = values[2] || '';
+                        const district = values[3] || '';
+                        const key = `${name}-${state}-${district}`;
+                        
+                        // Determine accurate status based on confirmed signers
+                        let status = 'NOT_SIGNED';
+                        if (confirmedSigners.has(key)) {
+                            status = 'SIGNED';
+                        } else if (values[4] === 'D') {
+                            // Democrats who haven't signed yet - most expected to sign
+                            status = 'EXPECTED_TO_SIGN';
+                        }
+                        
                         representatives.push({
-                            name: values[1] || '',
-                            state: values[2] || '',
-                            district: values[3] || '',
+                            name: name,
+                            state: state,
+                            district: district,
                             party: values[4] || '',
-                            status: values[5] || 'UNKNOWN',
+                            status: status,
                             phone: values[6] || '',
                             notes: values[7] || ''
                         });
@@ -325,10 +355,10 @@
                 
                 if (rep.status === 'SIGNED') {
                     statusClass = 'status-signed';
-                    statusText = 'Confirmed';
-                } else if (rep.status === 'PRESUMED_SIGNED') {
+                    statusText = 'CONFIRMED';
+                } else if (rep.status === 'EXPECTED_TO_SIGN') {
                     statusClass = 'status-presumed';
-                    statusText = 'Presumed';
+                    statusText = 'Expected';
                 } else if (rep.status === 'NOT_SIGNED') {
                     statusClass = 'status-not-signed';
                     statusText = 'Not Signed';
@@ -361,7 +391,7 @@
                 const matchesFilter = 
                     activeFilter === 'all' ||
                     (activeFilter === 'signed' && rep.status === 'SIGNED') ||
-                    (activeFilter === 'presumed' && rep.status === 'PRESUMED_SIGNED') ||
+                    (activeFilter === 'expected' && rep.status === 'EXPECTED_TO_SIGN') ||
                     (activeFilter === 'not-signed' && rep.status === 'NOT_SIGNED') ||
                     (activeFilter === 'republican' && rep.party === 'R') ||
                     (activeFilter === 'democrat' && rep.party === 'D');
@@ -375,12 +405,12 @@
         function updateStats() {
             const totalReps = allRepresentatives.length;
             const confirmedSigned = allRepresentatives.filter(rep => rep.status === 'SIGNED').length;
-            const presumedSigned = allRepresentatives.filter(rep => rep.status === 'PRESUMED_SIGNED').length;
+            const expectedSigned = allRepresentatives.filter(rep => rep.status === 'EXPECTED_TO_SIGN').length;
             const notSigned = allRepresentatives.filter(rep => rep.status === 'NOT_SIGNED').length;
             
             document.getElementById('total-reps').textContent = totalReps;
             document.getElementById('confirmed-signed').textContent = confirmedSigned;
-            document.getElementById('presumed-signed').textContent = presumedSigned;
+            document.getElementById('expected-signed').textContent = expectedSigned;
             document.getElementById('not-signed').textContent = notSigned;
         }
 
