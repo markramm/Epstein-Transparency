@@ -1,9 +1,9 @@
 // Epstein Files Discharge Petition Tracker - Interactive Features
 
-// Configuration
-const PETITION_START_TIME = new Date('2025-09-03T10:00:00-04:00'); // Sept 3, 2025, 10 AM ET
-const TOTAL_NEEDED = 218;
-const CURRENT_SIGNATURES = 215; // BREAKING: Only 3 signatures away!
+// Configuration - Will be loaded from signers.json
+let PETITION_START_TIME = new Date('2025-09-03T10:00:00-04:00'); // Sept 3, 2025, 10 AM ET
+let TOTAL_NEEDED = 218;
+let CURRENT_SIGNATURES = 215; // Default values, will be updated from JSON
 
 // Representative data
 const representatives = [
@@ -104,6 +104,20 @@ const representatives = [
             "Faces tough re-election every cycle"
         ],
         tweetTemplate: "@RepDonBacon show your military courage extends to moral courage! Join fellow Republicans standing with survivors. Nebraska is watching! 202-225-4155 #CourageCoalition"
+    },
+    {
+        name: "Eric Swalwell",
+        district: "CA-14",
+        phone: "202-225-5065",
+        priority: "LOW",
+        position: "Last Democrat to sign (211 of 212 have signed) - likely coming soon",
+        oneLiner: "Complete the Democratic unity - be the 212th",
+        talkingPoints: [
+            "Last Democrat of 212 who hasn't signed yet",
+            "Petition only filed Sept 2 - many just signed today",
+            "On Judiciary Committee - likely just hasn't gotten to it yet"
+        ],
+        tweetTemplate: "@RepSwalwell complete the Democratic unity! 211 of your colleagues have signed the discharge petition. Be the 212th! Your signature matters. 202-225-5065 #EpsteinFiles"
     }
 ];
 
@@ -124,6 +138,7 @@ let trackingData = {
         democratCount: 130
     },
     callReports: {
+        swalwell: { total: 0, willSign: 0, considering: 0, wontSign: 0, noAnswer: 0 },
         vandrew: { total: 0, willSign: 0, considering: 0, wontSign: 0, noAnswer: 0 },
         kiggans: { total: 0, willSign: 0, considering: 0, wontSign: 0, noAnswer: 0 },
         kim: { total: 0, willSign: 0, considering: 0, wontSign: 0, noAnswer: 0 },
@@ -151,8 +166,54 @@ function saveTrackingData() {
     localStorage.setItem('epsteinTrackerData', JSON.stringify(trackingData));
 }
 
+// Load signature counts from signers.json
+async function loadSignatureData() {
+    try {
+        const response = await fetch('data/signers.json');
+        if (response.ok) {
+            const data = await response.json();
+            if (data.metadata) {
+                CURRENT_SIGNATURES = data.metadata.total_signatures || CURRENT_SIGNATURES;
+                TOTAL_NEEDED = data.metadata.total_needed || TOTAL_NEEDED;
+                
+                // Update the display elements
+                const currentEl = document.getElementById('current');
+                const neededEl = document.getElementById('needed');
+                const progressBar = document.querySelector('.progress-bar');
+                
+                if (currentEl) currentEl.textContent = CURRENT_SIGNATURES;
+                if (neededEl) neededEl.textContent = TOTAL_NEEDED - CURRENT_SIGNATURES;
+                if (progressBar) {
+                    progressBar.setAttribute('aria-valuenow', CURRENT_SIGNATURES);
+                    progressBar.setAttribute('aria-valuemax', TOTAL_NEEDED);
+                }
+                
+                // Update timestamp if available
+                if (data.metadata.last_updated) {
+                    const timestamp = document.getElementById('count-timestamp');
+                    if (timestamp) {
+                        const date = new Date(data.metadata.last_updated);
+                        timestamp.textContent = `As of ${date.toLocaleDateString('en-US', { 
+                            month: 'short', 
+                            day: 'numeric', 
+                            year: 'numeric',
+                            hour: 'numeric',
+                            minute: '2-digit',
+                            timeZoneName: 'short'
+                        })}`;
+                    }
+                }
+            }
+        }
+    } catch (error) {
+        console.error('Failed to load signature data:', error);
+        // Continue with default values
+    }
+}
+
 // Initialize page on load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
+    await loadSignatureData(); // Load latest counts first
     loadTrackingData();
     updateDateTime();
     updateProgressBar();
@@ -628,6 +689,7 @@ function openReportForm(repKey) {
                     <label for="report-office">Which office did you call?</label>
                     <select id="report-office" required>
                         <option value="">Select...</option>
+                        <option value="swalwell">Eric Swalwell (CA-14) - ONLY DEM</option>
                         <option value="vandrew">Jeff Van Drew (NJ-02)</option>
                         <option value="kiggans">Jen Kiggans (VA-02)</option>
                         <option value="kim">Young Kim (CA-40)</option>
@@ -787,7 +849,9 @@ function emailRep(index) {
     // Customize email based on rep's specific situation
     let customParagraph = '';
     
-    if (rep.name === 'Jeff Van Drew') {
+    if (rep.name === 'Eric Swalwell') {
+        customParagraph = `I'm deeply concerned that you are the ONLY Democrat out of 212 who hasn't signed the discharge petition. Every other Democrat - including Henry Cuellar who's under federal indictment, Jared Golden in a Trump+6 district, and Marie Gluesenkamp Pérez in a deep red district - has signed. As a Judiciary Committee member who regularly advocates for accountability and transparency, this absence is particularly puzzling. Your Democratic colleagues need you to complete the unity on this issue.`;
+    } else if (rep.name === 'Jeff Van Drew') {
         customParagraph = `I'm particularly concerned that you co-sponsored H.R. 185 but have not signed the discharge petition. This seems contradictory - if you believed in the bill enough to co-sponsor it, why won't you help bring it to a vote?`;
     } else if (rep.name === 'Jen Kiggans') {
         customParagraph = `As Chair of the VA Oversight & Investigations Subcommittee, you have a special responsibility for accountability. You voted to expel George Santos citing "highest standards of behavior and ethics." This issue demands those same standards.`;
