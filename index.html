@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1 Courageous Republican Needed: Force Release of All Epstein Files</title>
+    <link rel="stylesheet" href="assets/shared.css">
     <link rel="stylesheet" href="assets/style.css">
     <meta name="description" content="Survivors demand transparency. 217/218 signatures secured - just 1 courageous Republican needed to bypass leadership and force a vote. Track progress and take action.">
     <meta property="og:title" content="1 Courageous Republican Away: Force Release of All Epstein Files">
@@ -14,75 +15,129 @@
     <meta name="twitter:description" content="Survivors demand transparency. 217/218 signatures - just 1 courageous Republican needed to force a vote.">
 </head>
 <body>
-    <header>
-        <h1>1 Courageous Republican Needed: Force Release of All Epstein Files</h1>
-        <p class="subtitle">Tracking the discharge petition to bypass leadership and force a House vote</p>
-        <p class="updated">Last Updated: <span id="update-time"></span></p>
-    </header>
-
-    <section id="latest-news" class="news-banner">
-        <h2>🚨 Latest Update - September 10, 2025</h2>
-        <div class="news-content">
-            <p><strong>216 confirmed signatures!</strong> Walkinshaw wins VA-11 and pledged to sign = 217. Only <strong>1 courageous Republican needed</strong>.</p>
-            <p><strong>The moment of truth:</strong></p>
-            <ul>
-                <li>🎯 <strong>Current GOP signers:</strong> Massie, Mace, Boebert, Greene</li>
-                <li>✅ <strong>Walkinshaw (D-VA11):</strong> Won special election, pledged to sign</li>
-                <li>🗳️ <strong>Grijalva (D-AZ7):</strong> Heavy favorite on Sept 23, also pledged to sign</li>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Epstein Files Tracker</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="take-action.html">Take Action</a></li>
+                <li><a href="all-representatives.html">House Tracker</a></li>
+                <li><a href="senate-epstein-vote.html">Senate Vote</a></li>
+                <li><a href="why-this-matters.html">Why This Matters</a></li>
+                <li><a href="methodology.html">Methodology</a></li>
+                <li><a href="take-action.html" class="nav-cta">📞 Contact Now</a></li>
             </ul>
-            <p><strong>The challenge:</strong> Need 1 Republican with courage to vote for transparency on files that may implicate Clinton, Trump, and other powerful men. White House calling petition support a "hostile act" - but survivors are begging for justice.</p>
+            <button class="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="page-container">
+            <h1>1 Courageous Republican Needed</h1>
+            <p class="subtitle">217/218 signatures secured. Force release of ALL Epstein files.</p>
+            <a href="take-action.html" class="hero-cta">
+                📞 Contact Your Representative Now
+            </a>
         </div>
     </section>
 
-    <section id="senate-update" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); color: white; padding: 1.5rem; margin: 1rem 0; border-radius: 12px; text-align: center; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);">
-        <h3 style="margin-bottom: 1rem; font-size: 1.4rem;">🏛️ Senate Vote Update - September 10th</h3>
-        <p style="margin-bottom: 1rem; opacity: 0.95;">Schumer forced a surprise Senate vote on releasing Epstein files. <strong>51 Republicans blocked transparency, only 2 showed courage.</strong></p>
-        <a href="senate-epstein-vote.html" style="display: inline-block; background: white; color: #7c3aed; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);" 
-           onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.2)'" 
-           onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 2px 4px rgba(0, 0, 0, 0.1)'">
-            📊 See How Every Senator Voted →
-        </a>
-    </section>
-
-    <section id="why-this-matters" class="why-section">
-        <h2>Why This Matters</h2>
-        <div class="why-content">
-            <div class="why-grid">
-                <div class="why-point">
-                    <span class="why-icon">👥</span>
-                    <h3>Survivors Are Begging</h3>
-                    <p>They're asking for transparency with privacy protections.<br>
-                    <strong>"This is not a hoax"</strong> — Marina Lacerda, <a href="https://www.reuters.com/world/us/epstein-survivors-congress-disclosure-2025-09-03/" target="_blank" class="inline-source">Sept 3 press conference</a></p>
+    <!-- Progress Section -->
+    <div class="page-container">
+        <section class="progress-section">
+            <h2>Progress: <span id="current" aria-live="polite">217</span> / 218 Signatures</h2>
+            <div class="progress-bar" role="progressbar" aria-valuenow="217" aria-valuemin="0" aria-valuemax="218">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-stats">
+                <div class="stat-item">
+                    <div class="stat-number">216</div>
+                    <div class="stat-label">Confirmed Signatures</div>
                 </div>
-                <div class="why-point">
-                    <span class="why-icon">💪</span>
-                    <h3>Republicans Showed Courage</h3>
-                    <p>MTG, Boebert, and Nancy Mace defied leadership.<br>
-                    They proved Republicans can stand with survivors.</p>
+                <div class="stat-item">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Pledged (Walkinshaw)</div>
                 </div>
-                <div class="why-point">
-                    <span class="why-icon">✅</span>
-                    <h3>Just 3 More Needed</h3>
-                    <p>We're ONLY 3 signatures away from giving survivors<br>
-                    the transparency they're begging for!</p>
+                <div class="stat-item">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">More Needed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">GOP Heroes</div>
                 </div>
             </div>
-            <div class="why-bottom">
-                <div class="why-urgent">
-                    <strong>The Ask:</strong> Survivors want transparency with automatic victim name redaction. That's it.
+            <p style="text-align: center; color: var(--text-secondary); margin-top: 1rem;">
+                Last Updated: <span id="update-time">October 17, 2025</span> |
+                <a href="methodology.html" style="color: var(--accent-color);">Verification Details</a>
+            </p>
+        </section>
+
+        <!-- Key Updates -->
+        <div class="grid-2 mb-4">
+            <div class="card" style="border: 2px solid #e74c3c;">
+                <div class="card-header">
+                    <div class="card-title" style="color: #e74c3c;">🚨 BREAKING: Leadership Blocking Final Signature</div>
+                    <div class="card-description">Rep.-elect Adelita Grijalva has not been sworn in despite winning election nearly a month ago</div>
                 </div>
-                <div class="why-framework">
-                    <strong>The Heroes:</strong> MTG and Boebert already signed. They're inviting others to join them.
+                <div class="card-content">
+                    <p><strong>The Situation:</strong> Grijalva won her Sept 23 special election and pledged to provide the 218th signature. Speaker Johnson refuses to swear her in during the government shutdown.</p>
+                    <p><strong>Precedent Broken:</strong> Johnson swore in 2 Florida Republicans in April during pro-forma sessions the day after their elections. Grijalva has waited 24+ days.</p>
+                    <p><strong>What This Means:</strong> Without her swearing-in, the discharge petition cannot reach 218 signatures—blocking the vote on Epstein files transparency.</p>
+                    <a href="why-this-matters.html#obstruction" class="btn btn-primary mt-2" style="background: #e74c3c;">📖 Read About the Obstruction</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">📊 Current Status</div>
+                    <div class="card-description">217/218 signatures—so close yet blocked</div>
+                </div>
+                <div class="card-content">
+                    <p><strong>Confirmed Signatures:</strong> 216 (4 GOP + 212 Dem)</p>
+                    <p><strong>GOP Heroes:</strong> Massie, Mace, Boebert, Greene</p>
+                    <p><strong>Pledged:</strong> Adelita Grijalva (AZ-07) - awaiting swearing-in</p>
+                    <p><strong>Senate Vote (Sept 10):</strong> 51-49 to block (Paul & Hawley voted for transparency)</p>
+                    <a href="all-representatives.html" class="btn btn-primary mt-2">📋 See All Representatives</a>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Why This Matters Summary -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <div class="card-title">👥 Why Survivors Need This</div>
+                <div class="card-description">"This is not a hoax" - Marina Lacerda, survivor advocate</div>
+            </div>
+            <div class="card-content">
+                <div class="grid-3">
+                    <div class="text-center">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">📋</div>
+                        <h4>Simple Request</h4>
+                        <p>Transparency with automatic victim name redaction</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">💪</div>
+                        <h4>Bipartisan Support</h4>
+                        <p>4 GOP + 213 Dem signatures = real momentum</p>
+                    </div>
+                    <div class="text-center">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚖️</div>
+                        <h4>Justice & Closure</h4>
+                        <p>Survivors deserve truth about their trauma</p>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="why-this-matters.html" class="btn btn-outline">📖 Read Full Story</a>
+                </div>
+            </div>
+        </div>
 
     <section id="progress">
         <div class="live-count-box">
             <div class="official-source">
                 <span class="live-indicator">● LIVE</span>
-                <span class="count-timestamp" id="count-timestamp">As of Sept 10, 2025, 2:30 PM ET</span>
+                <span class="count-timestamp" id="count-timestamp">As of Oct 17, 2025, 12:00 PM ET</span>
                 <a href="https://clerk.house.gov/DischargePetition/2025090209" target="_blank" rel="noopener" class="clerk-link">→ Verify at House Clerk</a>
             </div>
         </div>
@@ -183,38 +238,28 @@
             <section id="recent-activity" class="card">
                 <h3>Recent Activity</h3>
             <ul id="activity-list" class="activity-feed">
+                <li>Oct 17: Grijalva still not sworn in, 24+ days after winning election <a href="https://www.npr.org/2025/10/16/g-s1-93709/adelita-grijalva-mike-johnson-swearing-in" target="_blank" rel="noopener" class="inline-source">[NPR]</a></li>
+                <li>Oct 14: Arizona AG threatens legal action over delayed swearing-in <a href="https://www.kjzz.org/politics/2025-10-14/congresswoman-elect-grijalvas-win-is-certified-mayes-threatens-litigation-if-shes-not-sworn-in" target="_blank" rel="noopener" class="inline-source">[KJZZ]</a></li>
+                <li>Sept 30+: Government shutdown continues, House remains in recess <a href="https://www.axios.com/2025/10/07/mike-johnson-government-shutdown-epstein-files" target="_blank" rel="noopener" class="inline-source">[Axios]</a></li>
+                <li>Sept 23: Adelita Grijalva wins AZ-07 special election, pledges to sign petition <a href="https://cronkitenews.azpbs.org/2025/09/25/adelita-grijalva-house-petition-vote-epstein-files/" target="_blank" rel="noopener" class="inline-source">[Cronkite News]</a></li>
+                <li>Sept 10: Senate votes 51-49 to block Schumer's Epstein files amendment <a href="senate-epstein-vote.html" class="inline-source">[Details]</a></li>
                 <li>Sept 3: Survivors held Capitol press conference <a href="https://www.reuters.com/world/us/epstein-survivors-congress-disclosure-2025-09-03/" target="_blank" rel="noopener" class="inline-source">[Reuters]</a></li>
-                <li>Sept 3: House Oversight released ~33,000 pages (heavily redacted) <a href="https://oversight.house.gov/release/epstein-documents-2025-09-03/" target="_blank" rel="noopener" class="inline-source">[Committee]</a></li>
                 <li>Sept 3: Rep. Massie filed discharge petition <a href="https://clerk.house.gov/DischargePetition/2025090209" target="_blank" rel="noopener" class="inline-source">[Clerk]</a></li>
-                <li>Sept 3: Four Republicans signed on first day back <a href="data/signers.html" class="inline-source">[View Data]</a></li>
             </ul>
         </section>
 
-        <section id="contribute" class="card">
-            <h3>📊 Help Keep This Updated</h3>
-            <p class="contribute-intro">This is a community effort. Report what you find:</p>
-            <div class="contribute-grid">
-                <a href="https://github.com/markramm/Epstein-Transparency/issues/new?title=[NEWS]%20&body=**Media%20Outlet:**%20%0A**URL:**%20%0A**Key%20Points:**%20%0A**Representatives%20Mentioned:**" target="_blank" class="contribute-btn">
-                    📰 Report News Coverage
-                </a>
-                <a href="https://github.com/markramm/Epstein-Transparency/issues/new?title=[SOCIAL]%20&body=**Platform:**%20%0A**Link:**%20%0A**Who%20Posted:**%20%0A**Key%20Message:**%20%0A**Engagement%20(likes/RTs):**" target="_blank" class="contribute-btn">
-                    🐦 Share Social Posts
-                </a>
-                <a href="https://github.com/markramm/Epstein-Transparency/issues/new?title=[ANALYSIS]%20&body=**Source:**%20%0A**Link:**%20%0A**Key%20Insights:**%20%0A**How%20This%20Helps:**" target="_blank" class="contribute-btn">
-                    📈 Submit Analysis
-                </a>
-                <a href="https://github.com/markramm/Epstein-Transparency/issues/new?title=[UPDATE]%20&body=**What%20Needs%20Updating:**%20%0A**Correct%20Information:**%20%0A**Source:**" target="_blank" class="contribute-btn">
-                    ✏️ Suggest Corrections
-                </a>
-                <a href="https://github.com/markramm/Epstein-Transparency/issues/new?title=[STRATEGY]%20&body=**Idea:**%20%0A**Why%20It%20Would%20Help:**%20%0A**How%20to%20Implement:**" target="_blank" class="contribute-btn">
-                    💡 Strategy Ideas
-                </a>
-                <a href="https://github.com/markramm/Epstein-Transparency/issues/new?title=[OTHER]%20&body=**Category:**%20%0A**Details:**" target="_blank" class="contribute-btn">
-                    ➕ Other Updates
-                </a>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">🤝 Community Support</div>
+                </div>
+                <div class="card-content">
+                    <p>Help track progress and share updates:</p>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="https://github.com/markramm/Epstein-Transparency/issues" target="_blank" class="btn btn-outline" style="font-size: 0.875rem; padding: 0.5rem 1rem;">Report Updates</a>
+                        <a href="#" onclick="shareUrl(window.location.href, 'Epstein Files Tracker')" class="btn btn-outline" style="font-size: 0.875rem; padding: 0.5rem 1rem;">Share Site</a>
+                    </div>
+                </div>
             </div>
-            <p class="contribute-note">All submissions help build momentum. No GitHub account? Create one free at github.com or contact via repository issues.</p>
-        </section>
         </div>
     </div>
 

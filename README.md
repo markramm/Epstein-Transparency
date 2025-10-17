@@ -1,12 +1,20 @@
 # Epstein Files Discharge Petition Tracker
 
-**Status: 215/218 signatures (As of Sept 4, 2025, 11:59 PM ET)** | [Live Dashboard](https://markramm.github.io/Epstein-Transparency) | [Verify at House Clerk](https://clerk.house.gov/DischargePetition/2025090209)
+**Status: 217/218 signatures (As of Oct 17, 2025)** | [Live Dashboard](https://markramm.github.io/Epstein-Transparency) | [Verify at House Clerk](https://clerk.house.gov/DischargePetition/2025090209)
 
 ## Mission
 Track progress toward 218 signatures needed to force a House vote on releasing all Epstein-related government records with proper victim protections.
 
-## 🚨 BREAKING: ONLY 3 SIGNATURES AWAY! 🚨
-Need just 3 more signatures to force a vote!
+## 🚨 BREAKING: 1 SIGNATURE AWAY—BUT DELIBERATELY BLOCKED! 🚨
+
+**The Situation:** Rep.-elect Adelita Grijalva won her Arizona special election on Sept 23 and pledged to provide the 218th signature. Speaker Johnson refuses to swear her in during the government shutdown—a clear break from precedent.
+
+**The Double Standard:**
+- **April 2025:** Johnson swore in 2 GOP Reps the day after their elections during pro-forma sessions
+- **Sept 2025:** Johnson swore in Rep. Walkinshaw (D-VA) less than 24 hours after his election
+- **Oct 2025:** Grijalva has waited 24+ days with no scheduled swearing-in
+
+Arizona AG has threatened legal action. This is procedural obstruction to prevent the Epstein files vote.
 
 ### Priority Targets
 - **Young Kim (CA-40)**: 202-225-4111 | [@RepYoungKim](https://twitter.com/RepYoungKim)
