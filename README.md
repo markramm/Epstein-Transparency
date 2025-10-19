@@ -1,20 +1,28 @@
 # Epstein Files Discharge Petition Tracker
 
-**Status: 217/218 signatures (As of Oct 17, 2025)** | [Live Dashboard](https://markramm.github.io/Epstein-Transparency) | [Verify at House Clerk](https://clerk.house.gov/DischargePetition/2025090209)
+**Status: 217/218 signatures (As of Oct 22, 2025)** | [Live Dashboard](https://markramm.github.io/Epstein-Transparency) | [Verify at House Clerk](https://clerk.house.gov/DischargePetition/2025090209)
 
 ## Mission
 Track progress toward 218 signatures needed to force a House vote on releasing all Epstein-related government records with proper victim protections.
 
-## 🚨 BREAKING: 1 SIGNATURE AWAY—BUT DELIBERATELY BLOCKED! 🚨
+## 🚨 BREAKING: 30+ DAYS OF OBSTRUCTION - LEGAL ACTION THREATENED 🚨
 
-**The Situation:** Rep.-elect Adelita Grijalva won her Arizona special election on Sept 23 and pledged to provide the 218th signature. Speaker Johnson refuses to swear her in during the government shutdown—a clear break from precedent.
+**The Situation:** Rep.-elect Adelita Grijalva won her Arizona special election on **Sept 23** and pledged to provide the 218th signature. Speaker Johnson refuses to swear her in—now **30+ days** of unprecedented delay. Government shutdown now **third-longest in U.S. history**.
 
 **The Double Standard:**
-- **April 2025:** Johnson swore in 2 GOP Reps the day after their elections during pro-forma sessions
-- **Sept 2025:** Johnson swore in Rep. Walkinshaw (D-VA) less than 24 hours after his election
-- **Oct 2025:** Grijalva has waited 24+ days with no scheduled swearing-in
+- **April 2025:** Johnson swore in 2 GOP Reps **1 day** after their elections during pro-forma sessions
+- **Sept 2025:** Johnson swore in Rep. Walkinshaw (D-VA) **less than 24 hours** after his election
+- **Oct 2025:** Grijalva has waited **30+ days** with House in recess through Oct 26
 
-Arizona AG has threatened legal action. This is procedural obstruction to prevent the Epstein files vote.
+**Legal Escalation:**
+- **Oct 17:** House Minority Leader Hakeem Jeffries threatens "swift and decisive legal action"
+- **Oct 14:** Arizona AG Kris Mayes drafting lawsuit against Speaker Johnson
+- **Oct 14-15:** Democrats march to Johnson's office chanting "Swear her in!"
+- **Johnson's response:** Dismissed as "publicity stunt"
+
+## 💜 Virginia Giuffre's Posthumous Memoir Released Oct 21
+
+**"Nobody's Girl"** published during this standoff. Virginia Giuffre, one of the most prominent Epstein survivors, died by suicide in April 2025 at age 41. Before her death, she stated releasing her memoir was her "heartfelt wish" - "regardless" of circumstances. The timing adds profound moral weight to survivors' plea for transparency.
 
 ### Priority Targets
 - **Young Kim (CA-40)**: 202-225-4111 | [@RepYoungKim](https://twitter.com/RepYoungKim)
