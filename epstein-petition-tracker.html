@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epstein Files Discharge Petition Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .status-bar {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .status-item {
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .status-item.signed {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        .status-item.not-signed {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+
+        .status-item.needed {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-number {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .controls {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.2s;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid #e5e7eb;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn.active {
+            background: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        .table-container {
+            background: white;
+            margin: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+            color: #374151;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        tr:hover {
+            background-color: #f9fafb;
+        }
+
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-signed {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        .status-not-signed {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+
+        .status-unknown {
+            background-color: #f3f4f6;
+            color: #6b7280;
+        }
+
+        .party-r {
+            color: #dc2626;
+            font-weight: 600;
+        }
+
+        .party-d {
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .phone-link {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .phone-link:hover {
+            text-decoration: underline;
+        }
+
+        .news-banner {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-banner h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .news-banner p {
+            margin-bottom: 0.25rem;
+            opacity: 0.95;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .cta-section strong {
+            font-size: 1.3rem;
+            display: block;
+            margin: 1rem 0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .cta-button {
+            background: white;
+            color: #dc2626;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-box {
+                min-width: unset;
+            }
+            
+            table {
+                font-size: 0.875rem;
+            }
+            
+            th, td {
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Epstein Files Discharge Petition Tracker</h1>
+        <p>🚨 CRITICAL: 218th Signature Expected TOMORROW - House Vote Imminent</p>
+    </div>
+
+    <div class="news-banner">
+        <h3>🚨 BREAKING - November 12, 2025: The Dog Finally Barked</h3>
+        <p><strong>Tomorrow:</strong> Rep. Adelita Grijalva (D-AZ) will be sworn in and become the 218th signature</p>
+        <p><strong>What this means:</strong> Mandatory House vote on Epstein Files Transparency Act in early December</p>
+        <p><strong>The backstory:</strong> Speaker Johnson delayed Grijalva's swearing-in for 50 days to prevent this exact moment. House Democrats released emails showing Trump spent time with trafficking victims and knew about Epstein's operation.</p>
+        <p><strong>Public support:</strong> 70%+ of Americans support releasing the files, including 68% of Republicans</p>
+        <p><strong>What's at stake:</strong> ~100,000 unreleased documents that could expose additional powerful figures connected to trafficking operations</p>
+    </div>
+
+    <div class="status-bar">
+        <div class="status-item signed">
+            <span class="status-number" id="signed-count">217</span>
+            <div>Signatures</div>
+        </div>
+        <div class="status-item needed">
+            <span class="status-number" id="needed-count">1</span>
+            <div>Still Needed</div>
+        </div>
+        <div class="status-item not-signed">
+            <span class="status-number">218</span>
+            <div>Required Total</div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>⏰ THIS IS THE CRITICAL WINDOW</h2>
+        <p>After tomorrow's 218th signature, there will be a mandatory House vote in early December. The next 7 days are when constituent pressure is MOST effective.</p>
+        <strong>Your representatives need to hear from you RIGHT NOW.</strong>
+        <p>70%+ of Americans support releasing these files. If enough voters demand transparency, representatives will vote YES.</p>
+        <p><strong>What to say:</strong> "I'm your constituent and I demand you vote YES on the Epstein Files Transparency Act. 70% of Americans support releasing these documents. The public deserves to know the truth about trafficking networks and any powerful figures involved."</p>
+        <div class="cta-buttons">
+            <a href="https://www.house.gov/representatives/find-your-representative" class="cta-button" target="_blank">Find Your Representative</a>
+            <a href="https://www.senate.gov/senators/senators-contact.htm" class="cta-button" target="_blank">Find Your Senators</a>
+        </div>
+    </div>
+
+    <div class="controls">
+        <input type="text" class="search-box" id="searchBox" placeholder="Search by name, state, or district...">
+        
+        <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="signed">Signed</button>
+            <button class="filter-btn" data-filter="not-signed">Not Signed</button>
+            <button class="filter-btn" data-filter="republican">Republican</button>
+            <button class="filter-btn" data-filter="democrat">Democrat</button>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table id="representativeTable">
+            <thead>
+                <tr>
+                    <th>Representative</th>
+                    <th>State</th>
+                    <th>District</th>
+                    <th>Party</th>
+                    <th>Phone</th>
+                    <th>Petition Status</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Representatives data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>Data last updated: October 21, 2025 | 215 signatures secured, 3 more needed to force House vote</p>
+        <p><strong>Breaking:</strong> Virginia Giuffre's posthumous memoir "Nobody's Girl" published today, revealing unnamed "well-known Prime Minister" among alleged abusers</p>
+        <p><strong>Path to Victory:</strong> Need 1 more Republican to sign OR wait for Adelita Grijalva to win AZ-7 special election on September 23</p>
+        <p>Based on the Massie-Khanna discharge petition to release Jeffrey Epstein files within 30 days</p>
+        <p style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.8;">Giuffre died by suicide in April 2025. Her memoir details trafficking by Epstein & Maxwell, forced medical procedures, recruitment at Mar-a-Lago at age 16, and abuse by powerful figures including Prince Andrew (who renounced his royal title Oct 17). The book reinforces why full transparency and release of all Epstein files is critical for justice and accountability.</p>
+    </div>
+
+    <script>
+        const representatives = [
+            {"name": "Moore, Barry", "state": "Alabama", "district": "1st", "party": "R", "phone": "(202) 225-2901", "status": "NOT SIGNED"},
+            {"name": "Figures, Shomari", "state": "Alabama", "district": "2nd", "party": "D", "phone": "(202) 225-4931", "status": "SIGNED"},
+            {"name": "Rogers, Mike", "state": "Alabama", "district": "3rd", "party": "R", "phone": "(202) 225-3261", "status": "NOT SIGNED"},
+            {"name": "Aderholt, Robert", "state": "Alabama", "district": "4th", "party": "R", "phone": "(202) 225-4876", "status": "NOT SIGNED"},
+            {"name": "Strong, Dale", "state": "Alabama", "district": "5th", "party": "R", "phone": "(202) 225-4801", "status": "NOT SIGNED"},
+            {"name": "Palmer, Gary", "state": "Alabama", "district": "6th", "party": "R", "phone": "(202) 225-4921", "status": "NOT SIGNED"},
+            {"name": "Sewell, Terri", "state": "Alabama", "district": "7th", "party": "D", "phone": "(202) 225-2665", "status": "SIGNED"},
+            {"name": "Begich, Nicholas", "state": "Alaska", "district": "At Large", "party": "R", "phone": "(202) 225-5765", "status": "NOT SIGNED"},
+            {"name": "Radewagen, Aumua Amata", "state": "American Samoa", "district": "Delegate", "party": "R", "phone": "(202) 225-8577", "status": "NOT SIGNED"},
+            {"name": "Schweikert, David", "state": "Arizona", "district": "1st", "party": "R", "phone": "(202) 225-2190", "status": "NOT SIGNED"},
+            {"name": "Crane, Elijah", "state": "Arizona", "district": "2nd", "party": "R", "phone": "(202) 225-3361", "status": "NOT SIGNED"},
+            {"name": "Ansari, Yassamin", "state": "Arizona", "district": "3rd", "party": "D", "phone": "(202) 225-4065", "status": "SIGNED"},
+            {"name": "Stanton, Greg", "state": "Arizona", "district": "4th", "party": "D", "phone": "(202) 225-9888", "status": "SIGNED"},
+            {"name": "Biggs, Andy", "state": "Arizona", "district": "5th", "party": "R", "phone": "(202) 225-2635", "status": "NOT SIGNED"},
+            {"name": "Ciscomani, Juan", "state": "Arizona", "district": "6th", "party": "R", "phone": "(202) 225-2542", "status": "NOT SIGNED"},
+            {"name": "Grijalva, Raúl M.- Vacancy", "state": "Arizona", "district": "7th", "party": "D", "phone": "(202) 225-2435", "status": "VACANCY"},
+            {"name": "Hamadeh, Abraham", "state": "Arizona", "district": "8th", "party": "R", "phone": "(202) 225-4576", "status": "NOT SIGNED"},
+            {"name": "Gosar, Paul", "state": "Arizona", "district": "9th", "party": "R", "phone": "(202) 225-2315", "status": "NOT SIGNED"},
+            {"name": "Crawford, Eric", "state": "Arkansas", "district": "1st", "party": "R", "phone": "(202) 225-4076", "status": "NOT SIGNED"},
+            {"name": "Hill, J.", "state": "Arkansas", "district": "2nd", "party": "R", "phone": "(202) 225-2506", "status": "NOT SIGNED"},
+            {"name": "Womack, Steve", "state": "Arkansas", "district": "3rd", "party": "R", "phone": "(202) 225-4301", "status": "NOT SIGNED"},
+            {"name": "Westerman, Bruce", "state": "Arkansas", "district": "4th", "party": "R", "phone": "(202) 225-3772", "status": "NOT SIGNED"},
+            {"name": "LaMalfa, Doug", "state": "California", "district": "1st", "party": "R", "phone": "(202) 225-3076", "status": "NOT SIGNED"},
+            {"name": "Huffman, Jared", "state": "California", "district": "2nd", "party": "D", "phone": "(202) 225-5161", "status": "SIGNED"},
+            {"name": "Kiley, Kevin", "state": "California", "district": "3rd", "party": "R", "phone": "(202) 225-2523", "status": "NOT SIGNED"},
+            {"name": "Thompson, Mike", "state": "California", "district": "4th", "party": "D", "phone": "(202) 225-3311", "status": "SIGNED"},
+            {"name": "McClintock, Tom", "state": "California", "district": "5th", "party": "R", "phone": "(202) 225-2511", "status": "NOT SIGNED"},
+            {"name": "Bera, Ami", "state": "California", "district": "6th", "party": "D", "phone": "(202) 225-5716", "status": "SIGNED"},
+            {"name": "Matsui, Doris", "state": "California", "district": "7th", "party": "D", "phone": "(202) 225-7163", "status": "SIGNED"},
+            {"name": "Garamendi, John", "state": "California", "district": "8th", "party": "D", "phone": "(202) 225-1880", "status": "SIGNED"},
+            {"name": "Harder, Josh", "state": "California", "district": "9th", "party": "D", "phone": "(202) 225-4540", "status": "SIGNED"},
+            {"name": "DeSaulnier, Mark", "state": "California", "district": "10th", "party": "D", "phone": "(202) 225-2095", "status": "SIGNED"},
+            {"name": "Pelosi, Nancy", "state": "California", "district": "11th", "party": "D", "phone": "(202) 225-4965", "status": "SIGNED"},
+            {"name": "Simon, Lateefah", "state": "California", "district": "12th", "party": "D", "phone": "(202) 225-2661", "status": "SIGNED"},
+            {"name": "Gray, Adam", "state": "California", "district": "13th", "party": "D", "phone": "(202) 225-1947", "status": "SIGNED"},
+            {"name": "Swalwell, Eric", "state": "California", "district": "14th", "party": "D", "phone": "(202) 225-5065", "status": "SIGNED"},
+            {"name": "Mullin, Kevin", "state": "California", "district": "15th", "party": "D", "phone": "(202) 225-3531", "status": "SIGNED"},
+            {"name": "Liccardo, Sam", "state": "California", "district": "16th", "party": "D", "phone": "(202) 225-8104", "status": "SIGNED"},
+            {"name": "Khanna, Ro", "state": "California", "district": "17th", "party": "D", "phone": "(202) 225-2631", "status": "SIGNED"},
+            {"name": "Lofgren, Zoe", "state": "California", "district": "18th", "party": "D", "phone": "(202) 225-3072", "status": "SIGNED"},
+            {"name": "Panetta, Jimmy", "state": "California", "district": "19th", "party": "D", "phone": "(202) 225-2861", "status": "SIGNED"},
+            {"name": "Fong, Vince", "state": "California", "district": "20th", "party": "R", "phone": "(202) 225-2915", "status": "NOT SIGNED"},
+            {"name": "Costa, Jim", "state": "California", "district": "21st", "party": "D", "phone": "(202) 225-3341", "status": "SIGNED"},
+            {"name": "Valadao, David", "state": "California", "district": "22nd", "party": "R", "phone": "(202) 225-4695", "status": "NOT SIGNED"},
+            {"name": "Obernolte, Jay", "state": "California", "district": "23rd", "party": "R", "phone": "(202) 225-5861", "status": "NOT SIGNED"},
+            {"name": "Carbajal, Salud", "state": "California", "district": "24th", "party": "D", "phone": "(202) 225-3601", "status": "SIGNED"},
+            {"name": "Ruiz, Raul", "state": "California", "district": "25th", "party": "D", "phone": "(202) 225-5330", "status": "SIGNED"},
+            {"name": "Brownley, Julia", "state": "California", "district": "26th", "party": "D", "phone": "(202) 225-5811", "status": "SIGNED"},
+            {"name": "Whitesides, George", "state": "California", "district": "27th", "party": "D", "phone": "(202) 225-1956", "status": "SIGNED"},
+            {"name": "Chu, Judy", "state": "California", "district": "28th", "party": "D", "phone": "(202) 225-5464", "status": "SIGNED"},
+            {"name": "Rivas, Luz", "state": "California", "district": "29th", "party": "D", "phone": "(202) 225-6131", "status": "SIGNED"},
+            {"name": "Friedman, Laura", "state": "California", "district": "30th", "party": "D", "phone": "(202) 225-4176", "status": "SIGNED"},
+            {"name": "Cisneros, Gilbert", "state": "California", "district": "31st", "party": "D", "phone": "(202) 225-5256", "status": "SIGNED"},
+            {"name": "Sherman, Brad", "state": "California", "district": "32nd", "party": "D", "phone": "(202) 225-5911", "status": "SIGNED"},
+            {"name": "Aguilar, Pete", "state": "California", "district": "33rd", "party": "D", "phone": "(202) 225-3201", "status": "SIGNED"},
+            {"name": "Gomez, Jimmy", "state": "California", "district": "34th", "party": "D", "phone": "(202) 225-6235", "status": "SIGNED"},
+            {"name": "Torres, Norma", "state": "California", "district": "35th", "party": "D", "phone": "(202) 225-6161", "status": "SIGNED"},
+            {"name": "Lieu, Ted", "state": "California", "district": "36th", "party": "D", "phone": "(202) 225-3976", "status": "SIGNED"},
+            {"name": "Kamlager-Dove, Sydney", "state": "California", "district": "37th", "party": "D", "phone": "(202) 225-7084", "status": "SIGNED"},
+            {"name": "Sanchez, Linda", "state": "California", "district": "38th", "party": "D", "phone": "(202) 225-6676", "status": "SIGNED"},
+            {"name": "Takano, Mark", "state": "California", "district": "39th", "party": "D", "phone": "(202) 225-2305", "status": "SIGNED"},
+            {"name": "Kim, Young", "state": "California", "district": "40th", "party": "R", "phone": "(202) 225-4111", "status": "NOT SIGNED"},
+            {"name": "Calvert, Ken", "state": "California", "district": "41st", "party": "R", "phone": "(202) 225-1986", "status": "NOT SIGNED"},
+            {"name": "Garcia, Robert", "state": "California", "district": "42nd", "party": "D", "phone": "(202) 225-7924", "status": "SIGNED"},
+            {"name": "Waters, Maxine", "state": "California", "district": "43rd", "party": "D", "phone": "(202) 225-2201", "status": "SIGNED"},
+            {"name": "Barragan, Nanette", "state": "California", "district": "44th", "party": "D", "phone": "(202) 225-8220", "status": "SIGNED"},
+            {"name": "Tran, Derek", "state": "California", "district": "45th", "party": "D", "phone": "(202) 225-2415", "status": "SIGNED"},
+            {"name": "Correa, J.", "state": "California", "district": "46th", "party": "D", "phone": "(202) 225-2965", "status": "SIGNED"},
+            {"name": "Min, Dave", "state": "California", "district": "47th", "party": "D", "phone": "(202) 225-5611", "status": "SIGNED"},
+            {"name": "Issa, Darrell", "state": "California", "district": "48th", "party": "R", "phone": "(202) 225-5672", "status": "NOT SIGNED"},
+            {"name": "Levin, Mike", "state": "California", "district": "49th", "party": "D", "phone": "(202) 225-3906", "status": "SIGNED"},
+            {"name": "Peters, Scott", "state": "California", "district": "50th", "party": "D", "phone": "(202) 225-0508", "status": "SIGNED"},
+            {"name": "Jacobs, Sara", "state": "California", "district": "51st", "party": "D", "phone": "(202) 225-2040", "status": "SIGNED"},
+            {"name": "Vargas, Juan", "state": "California", "district": "52nd", "party": "D", "phone": "(202) 225-8045", "status": "SIGNED"},
+            {"name": "DeGette, Diana", "state": "Colorado", "district": "1st", "party": "D", "phone": "(202) 225-4431", "status": "SIGNED"},
+            {"name": "Neguse, Joe", "state": "Colorado", "district": "2nd", "party": "D", "phone": "(202) 225-2161", "status": "SIGNED"},
+            {"name": "Hurd, Jeff", "state": "Colorado", "district": "3rd", "party": "R", "phone": "(202) 225-4676", "status": "NOT SIGNED"},
+            {"name": "Boebert, Lauren", "state": "Colorado", "district": "4th", "party": "R", "phone": "(202) 225-4761", "status": "SIGNED"},
+            {"name": "Crank, Jeff", "state": "Colorado", "district": "5th", "party": "R", "phone": "(202) 225-4422", "status": "NOT SIGNED"},
+            {"name": "Crow, Jason", "state": "Colorado", "district": "6th", "party": "D", "phone": "(202) 225-7882", "status": "SIGNED"},
+            {"name": "Pettersen, Brittany", "state": "Colorado", "district": "7th", "party": "D", "phone": "(202) 225-2645", "status": "SIGNED"},
+            {"name": "Evans, Gabe", "state": "Colorado", "district": "8th", "party": "R", "phone": "(202) 225-5625", "status": "NOT SIGNED"},
+            {"name": "Larson, John", "state": "Connecticut", "district": "1st", "party": "D", "phone": "(202) 225-2265", "status": "SIGNED"},
+            {"name": "Courtney, Joe", "state": "Connecticut", "district": "2nd", "party": "D", "phone": "(202) 225-2076", "status": "SIGNED"},
+            {"name": "DeLauro, Rosa", "state": "Connecticut", "district": "3rd", "party": "D", "phone": "(202) 225-3661", "status": "SIGNED"},
+            {"name": "Himes, James", "state": "Connecticut", "district": "4th", "party": "D", "phone": "(202) 225-5541", "status": "SIGNED"},
+            {"name": "Hayes, Jahana", "state": "Connecticut", "district": "5th", "party": "D", "phone": "(202) 225-4476", "status": "SIGNED"},
+            {"name": "McBride, Sarah", "state": "Delaware", "district": "At Large", "party": "D", "phone": "(202) 225-4165", "status": "SIGNED"},
+            {"name": "Norton, Eleanor", "state": "District of Columbia", "district": "Delegate", "party": "D", "phone": "(202) 225-8050", "status": "SIGNED"},
+            {"name": "Patronis, Jimmy", "state": "Florida", "district": "1st", "party": "R", "phone": "(202) 225-4136", "status": "NOT SIGNED"},
+            {"name": "Dunn, Neal", "state": "Florida", "district": "2nd", "party": "R", "phone": "(202) 225-5235", "status": "NOT SIGNED"},
+            {"name": "Cammack, Kat", "state": "Florida", "district": "3rd", "party": "R", "phone": "(202) 225-5744", "status": "NOT SIGNED"},
+            {"name": "Bean, Aaron", "state": "Florida", "district": "4th", "party": "R", "phone": "(202) 225-0123", "status": "NOT SIGNED"},
+            {"name": "Rutherford, John", "state": "Florida", "district": "5th", "party": "R", "phone": "(202) 225-2501", "status": "NOT SIGNED"},
+            {"name": "Fine, Randy", "state": "Florida", "district": "6th", "party": "R", "phone": "(202) 225-2706", "status": "NOT SIGNED"},
+            {"name": "Mills, Cory", "state": "Florida", "district": "7th", "party": "R", "phone": "(202) 225-4035", "status": "NOT SIGNED"},
+            {"name": "Haridopolos, Mike", "state": "Florida", "district": "8th", "party": "R", "phone": "(202) 225-3671", "status": "NOT SIGNED"},
+            {"name": "Soto, Darren", "state": "Florida", "district": "9th", "party": "D", "phone": "(202) 225-9889", "status": "SIGNED"},
+            {"name": "Frost, Maxwell", "state": "Florida", "district": "10th", "party": "D", "phone": "(202) 225-2176", "status": "SIGNED"},
+            {"name": "Webster, Daniel", "state": "Florida", "district": "11th", "party": "R", "phone": "(202) 225-1002", "status": "NOT SIGNED"},
+            {"name": "Bilirakis, Gus", "state": "Florida", "district": "12th", "party": "R", "phone": "(202) 225-5755", "status": "NOT SIGNED"},
+            {"name": "Luna, Anna Paulina", "state": "Florida", "district": "13th", "party": "R", "phone": "(202) 225-5961", "status": "NOT SIGNED"},
+            {"name": "Castor, Kathy", "state": "Florida", "district": "14th", "party": "D", "phone": "(202) 225-3376", "status": "SIGNED"},
+            {"name": "Lee, Laurel", "state": "Florida", "district": "15th", "party": "R", "phone": "(202) 225-5626", "status": "NOT SIGNED"},
+            {"name": "Buchanan, Vern", "state": "Florida", "district": "16th", "party": "R", "phone": "(202) 225-5015", "status": "NOT SIGNED"},
+            {"name": "Steube, W.", "state": "Florida", "district": "17th", "party": "R", "phone": "(202) 225-5792", "status": "NOT SIGNED"},
+            {"name": "Franklin, Scott", "state": "Florida", "district": "18th", "party": "R", "phone": "(202) 225-1252", "status": "NOT SIGNED"},
+            {"name": "Donalds, Byron", "state": "Florida", "district": "19th", "party": "R", "phone": "(202) 225-2536", "status": "NOT SIGNED"},
+            {"name": "Cherfilus-McCormick, Sheila", "state": "Florida", "district": "20th", "party": "D", "phone": "(202) 225-1313", "status": "SIGNED"},
+            {"name": "Mast, Brian", "state": "Florida", "district": "21st", "party": "R", "phone": "(202) 225-3026", "status": "NOT SIGNED"},
+            {"name": "Frankel, Lois", "state": "Florida", "district": "22nd", "party": "D", "phone": "(202) 225-9890", "status": "SIGNED"},
+            {"name": "Moskowitz, Jared", "state": "Florida", "district": "23rd", "party": "D", "phone": "(202) 225-3001", "status": "SIGNED"},
+            {"name": "Wilson, Frederica", "state": "Florida", "district": "24th", "party": "D", "phone": "(202) 225-4506", "status": "SIGNED"},
+            {"name": "Wasserman Schultz, Debbie", "state": "Florida", "district": "25th", "party": "D", "phone": "(202) 225-7931", "status": "SIGNED"},
+            {"name": "Diaz-Balart, Mario", "state": "Florida", "district": "26th", "party": "R", "phone": "(202) 225-4211", "status": "NOT SIGNED"},
+            {"name": "Salazar, Maria", "state": "Florida", "district": "27th", "party": "R", "phone": "(202) 225-3931", "status": "NOT SIGNED"},
+            {"name": "Gimenez, Carlos", "state": "Florida", "district": "28th", "party": "R", "phone": "(202) 225-2778", "status": "NOT SIGNED"},
+            {"name": "Carter, Earl", "state": "Georgia", "district": "1st", "party": "R", "phone": "(202) 225-5831", "status": "NOT SIGNED"},
+            {"name": "Bishop, Sanford", "state": "Georgia", "district": "2nd", "party": "D", "phone": "(202) 225-3631", "status": "SIGNED"},
+            {"name": "Jack, Brian", "state": "Georgia", "district": "3rd", "party": "R", "phone": "(202) 225-5901", "status": "NOT SIGNED"},
+            {"name": "Johnson, Henry", "state": "Georgia", "district": "4th", "party": "D", "phone": "(202) 225-1605", "status": "SIGNED"},
+            {"name": "Williams, Nikema", "state": "Georgia", "district": "5th", "party": "D", "phone": "(202) 225-3801", "status": "SIGNED"},
+            {"name": "McBath, Lucy", "state": "Georgia", "district": "6th", "party": "D", "phone": "(202) 225-4501", "status": "SIGNED"},
+            {"name": "McCormick, Richard", "state": "Georgia", "district": "7th", "party": "R", "phone": "(202) 225-4272", "status": "NOT SIGNED"},
+            {"name": "Scott, Austin", "state": "Georgia", "district": "8th", "party": "R", "phone": "(202) 225-6531", "status": "NOT SIGNED"},
+            {"name": "Clyde, Andrew", "state": "Georgia", "district": "9th", "party": "R", "phone": "(202) 225-9893", "status": "NOT SIGNED"},
+            {"name": "Collins, Mike", "state": "Georgia", "district": "10th", "party": "R", "phone": "(202) 225-4101", "status": "NOT SIGNED"},
+            {"name": "Loudermilk, Barry", "state": "Georgia", "district": "11th", "party": "R", "phone": "(202) 225-2931", "status": "NOT SIGNED"},
+            {"name": "Allen, Rick", "state": "Georgia", "district": "12th", "party": "R", "phone": "(202) 225-2823", "status": "NOT SIGNED"},
+            {"name": "Scott, David", "state": "Georgia", "district": "13th", "party": "D", "phone": "(202) 225-2939", "status": "SIGNED"},
+            {"name": "Greene, Marjorie", "state": "Georgia", "district": "14th", "party": "R", "phone": "(202) 225-5211", "status": "SIGNED"},
+            {"name": "Moylan, James", "state": "Guam", "district": "Delegate", "party": "R", "phone": "(202) 225-1188", "status": "NOT SIGNED"},
+            {"name": "Case, Ed", "state": "Hawaii", "district": "1st", "party": "D", "phone": "(202) 225-2726", "status": "SIGNED"},
+            {"name": "Tokuda, Jill", "state": "Hawaii", "district": "2nd", "party": "D", "phone": "(202) 225-4906", "status": "SIGNED"},
+            {"name": "Fulcher, Russ", "state": "Idaho", "district": "1st", "party": "R", "phone": "(202) 225-6611", "status": "NOT SIGNED"},
+            {"name": "Simpson, Michael", "state": "Idaho", "district": "2nd", "party": "R", "phone": "(202) 225-5531", "status": "NOT SIGNED"},
+            {"name": "Jackson, Jonathan", "state": "Illinois", "district": "1st", "party": "D", "phone": "(202) 225-4372", "status": "SIGNED"},
+            {"name": "Kelly, Robin", "state": "Illinois", "district": "2nd", "party": "D", "phone": "(202) 225-0773", "status": "SIGNED"},
+            {"name": "Ramirez, Delia", "state": "Illinois", "district": "3rd", "party": "D", "phone": "(202) 225-5701", "status": "SIGNED"},
+            {"name": "Garcia, Jesus", "state": "Illinois", "district": "4th", "party": "D", "phone": "(202) 225-8203", "status": "SIGNED"},
+            {"name": "Quigley, Mike", "state": "Illinois", "district": "5th", "party": "D", "phone": "(202) 225-4061", "status": "SIGNED"},
+            {"name": "Casten, Sean", "state": "Illinois", "district": "6th", "party": "D", "phone": "(202) 225-4561", "status": "SIGNED"},
+            {"name": "Davis, Danny", "state": "Illinois", "district": "7th", "party": "D", "phone": "(202) 225-5006", "status": "SIGNED"},
+            {"name": "Krishnamoorthi, Raja", "state": "Illinois", "district": "8th", "party": "D", "phone": "(202) 225-3711", "status": "SIGNED"},
+            {"name": "Schakowsky, Janice", "state": "Illinois", "district": "9th", "party": "D", "phone": "(202) 225-2111", "status": "SIGNED"},
+            {"name": "Schneider, Bradley", "state": "Illinois", "district": "10th", "party": "D", "phone": "(202) 225-4835", "status": "SIGNED"},
+            {"name": "Foster, Bill", "state": "Illinois", "district": "11th", "party": "D", "phone": "(202) 225-3515", "status": "SIGNED"},
+            {"name": "Bost, Mike", "state": "Illinois", "district": "12th", "party": "R", "phone": "(202) 225-5661", "status": "NOT SIGNED"},
+            {"name": "Budzinski, Nikki", "state": "Illinois", "district": "13th", "party": "D", "phone": "(202) 225-2371", "status": "SIGNED"},
+            {"name": "Underwood, Lauren", "state": "Illinois", "district": "14th", "party": "D", "phone": "(202) 225-2976", "status": "SIGNED"},
+            {"name": "Miller, Mary", "state": "Illinois", "district": "15th", "party": "R", "phone": "(202) 225-5271", "status": "NOT SIGNED"},
+            {"name": "LaHood, Darin", "state": "Illinois", "district": "16th", "party": "R", "phone": "(202) 225-6201", "status": "NOT SIGNED"},
+            {"name": "Sorensen, Eric", "state": "Illinois", "district": "17th", "party": "D", "phone": "(202) 225-5905", "status": "SIGNED"},
+            {"name": "Mrvan, Frank", "state": "Indiana", "district": "1st", "party": "D", "phone": "(202) 225-2461", "status": "SIGNED"},
+            {"name": "Yakym, Rudy", "state": "Indiana", "district": "2nd", "party": "R", "phone": "(202) 225-3915", "status": "NOT SIGNED"},
+            {"name": "Stutzman, Marlin", "state": "Indiana", "district": "3rd", "party": "R", "phone": "(202) 225-4436", "status": "NOT SIGNED"},
+            {"name": "Baird, James", "state": "Indiana", "district": "4th", "party": "R", "phone": "(202) 225-5037", "status": "NOT SIGNED"},
+            {"name": "Spartz, Victoria", "state": "Indiana", "district": "5th", "party": "R", "phone": "(202) 225-2276", "status": "NOT SIGNED"},
+            {"name": "Shreve, Jefferson", "state": "Indiana", "district": "6th", "party": "R", "phone": "(202) 225-3021", "status": "NOT SIGNED"},
+            {"name": "Carson, Andre", "state": "Indiana", "district": "7th", "party": "D", "phone": "(202) 225-4011", "status": "SIGNED"},
+            {"name": "Messmer, Mark", "state": "Indiana", "district": "8th", "party": "R", "phone": "(202) 225-4636", "status": "NOT SIGNED"},
+            {"name": "Houchin, Erin", "state": "Indiana", "district": "9th", "party": "R", "phone": "(202) 225-5315", "status": "NOT SIGNED"},
+            {"name": "Miller-Meeks, Mariannette", "state": "Iowa", "district": "1st", "party": "R", "phone": "(202) 225-6576", "status": "NOT SIGNED"},
+            {"name": "Hinson, Ashley", "state": "Iowa", "district": "2nd", "party": "R", "phone": "(202) 225-2911", "status": "NOT SIGNED"},
+            {"name": "Nunn, Zachary", "state": "Iowa", "district": "3rd", "party": "R", "phone": "(202) 225-5476", "status": "NOT SIGNED"},
+            {"name": "Feenstra, Randy", "state": "Iowa", "district": "4th", "party": "R", "phone": "(202) 225-4426", "status": "NOT SIGNED"},
+            {"name": "Mann, Tracey", "state": "Kansas", "district": "1st", "party": "R", "phone": "(202) 225-2715", "status": "NOT SIGNED"},
+            {"name": "Schmidt, Derek", "state": "Kansas", "district": "2nd", "party": "R", "phone": "(202) 225-6601", "status": "NOT SIGNED"},
+            {"name": "Davids, Sharice", "state": "Kansas", "district": "3rd", "party": "D", "phone": "(202) 225-2865", "status": "SIGNED"},
+            {"name": "Estes, Ron", "state": "Kansas", "district": "4th", "party": "R", "phone": "(202) 225-6216", "status": "NOT SIGNED"},
+            {"name": "Comer, James", "state": "Kentucky", "district": "1st", "party": "R", "phone": "(202) 225-3115", "status": "NOT SIGNED"},
+            {"name": "Guthrie, Brett", "state": "Kentucky", "district": "2nd", "party": "R", "phone": "(202) 225-3501", "status": "NOT SIGNED"},
+            {"name": "McGarvey, Morgan", "state": "Kentucky", "district": "3rd", "party": "D", "phone": "(202) 225-5401", "status": "SIGNED"},
+            {"name": "Massie, Thomas", "state": "Kentucky", "district": "4th", "party": "R", "phone": "(202) 225-3465", "status": "SIGNED"},
+            {"name": "Rogers, Harold", "state": "Kentucky", "district": "5th", "party": "R", "phone": "(202) 225-4601", "status": "NOT SIGNED"},
+            {"name": "Barr, Andy", "state": "Kentucky", "district": "6th", "party": "R", "phone": "(202) 225-4706", "status": "NOT SIGNED"},
+            {"name": "Scalise, Steve", "state": "Louisiana", "district": "1st", "party": "R", "phone": "(202) 225-3015", "status": "NOT SIGNED"},
+            {"name": "Carter, Troy", "state": "Louisiana", "district": "2nd", "party": "D", "phone": "(202) 225-6636", "status": "SIGNED"},
+            {"name": "Higgins, Clay", "state": "Louisiana", "district": "3rd", "party": "R", "phone": "(202) 225-2031", "status": "NOT SIGNED"},
+            {"name": "Johnson, Mike", "state": "Louisiana", "district": "4th", "party": "R", "phone": "(202) 225-2777", "status": "NOT SIGNED"},
+            {"name": "Letlow, Julia", "state": "Louisiana", "district": "5th", "party": "R", "phone": "(202) 225-8490", "status": "NOT SIGNED"},
+            {"name": "Fields, Cleo", "state": "Louisiana", "district": "6th", "party": "D", "phone": "(202) 225-3901", "status": "SIGNED"},
+            {"name": "Pingree, Chellie", "state": "Maine", "district": "1st", "party": "D", "phone": "(202) 225-6116", "status": "SIGNED"},
+            {"name": "Golden, Jared", "state": "Maine", "district": "2nd", "party": "D", "phone": "(202) 225-6306", "status": "SIGNED"},
+            {"name": "Harris, Andy", "state": "Maryland", "district": "1st", "party": "R", "phone": "(202) 225-5311", "status": "NOT SIGNED"},
+            {"name": "Olszewski, Johnny", "state": "Maryland", "district": "2nd", "party": "D", "phone": "(202) 225-3061", "status": "SIGNED"},
+            {"name": "Elfreth, Sarah", "state": "Maryland", "district": "3rd", "party": "D", "phone": "(202) 225-4016", "status": "SIGNED"},
+            {"name": "Ivey, Glenn", "state": "Maryland", "district": "4th", "party": "D", "phone": "(202) 225-8699", "status": "SIGNED"},
+            {"name": "Hoyer, Steny", "state": "Maryland", "district": "5th", "party": "D", "phone": "(202) 225-4131", "status": "SIGNED"},
+            {"name": "McClain Delaney, April", "state": "Maryland", "district": "6th", "party": "D", "phone": "(202) 225-2721", "status": "SIGNED"},
+            {"name": "Mfume, Kweisi", "state": "Maryland", "district": "7th", "party": "D", "phone": "(202) 225-4741", "status": "SIGNED"},
+            {"name": "Raskin, Jamie", "state": "Maryland", "district": "8th", "party": "D", "phone": "(202) 225-5341", "status": "SIGNED"},
+            {"name": "Neal, Richard", "state": "Massachusetts", "district": "1st", "party": "D", "phone": "(202) 225-5601", "status": "SIGNED"},
+            {"name": "McGovern, James", "state": "Massachusetts", "district": "2nd", "party": "D", "phone": "(202) 225-6101", "status": "SIGNED"},
+            {"name": "Trahan, Lori", "state": "Massachusetts", "district": "3rd", "party": "D", "phone": "(202) 225-3411", "status": "SIGNED"},
+            {"name": "Auchincloss, Jake", "state": "Massachusetts", "district": "4th", "party": "D", "phone": "(202) 225-5931", "status": "SIGNED"},
+            {"name": "Clark, Katherine", "state": "Massachusetts", "district": "5th", "party": "D", "phone": "(202) 225-2836", "status": "SIGNED"},
+            {"name": "Moulton, Seth", "state": "Massachusetts", "district": "6th", "party": "D", "phone": "(202) 225-8020", "status": "SIGNED"},
+            {"name": "Pressley, Ayanna", "state": "Massachusetts", "district": "7th", "party": "D", "phone": "(202) 225-5111", "status": "SIGNED"},
+            {"name": "Lynch, Stephen", "state": "Massachusetts", "district": "8th", "party": "D", "phone": "(202) 225-8273", "status": "SIGNED"},
+            {"name": "Keating, William", "state": "Massachusetts", "district": "9th", "party": "D", "phone": "(202) 225-3111", "status": "SIGNED"},
+            {"name": "Bergman, Jack", "state": "Michigan", "district": "1st", "party": "R", "phone": "(202) 225-4735", "status": "NOT SIGNED"},
+            {"name": "Moolenaar, John", "state": "Michigan", "district": "2nd", "party": "R", "phone": "(202) 225-3561", "status": "NOT SIGNED"},
+            {"name": "Scholten, Hillary", "state": "Michigan", "district": "3rd", "party": "D", "phone": "(202) 225-3831", "status": "SIGNED"},
+            {"name": "Huizenga, Bill", "state": "Michigan", "district": "4th", "party": "R", "phone": "(202) 225-4401", "status": "NOT SIGNED"},
+            {"name": "Walberg, Tim", "state": "Michigan", "district": "5th", "party": "R", "phone": "(202) 225-6276", "status": "NOT SIGNED"},
+            {"name": "Dingell, Debbie", "state": "Michigan", "district": "6th", "party": "D", "phone": "(202) 225-4071", "status": "SIGNED"},
+            {"name": "Barrett, Tom", "state": "Michigan", "district": "7th", "party": "R", "phone": "(202) 225-4872", "status": "NOT SIGNED"},
+            {"name": "McDonald Rivet, Kristen", "state": "Michigan", "district": "8th", "party": "D", "phone": "(202) 225-3611", "status": "SIGNED"},
+            {"name": "McClain, Lisa", "state": "Michigan", "district": "9th", "party": "R", "phone": "(202) 225-2106", "status": "NOT SIGNED"},
+            {"name": "James, John", "state": "Michigan", "district": "10th", "party": "R", "phone": "(202) 225-4961", "status": "NOT SIGNED"},
+            {"name": "Stevens, Haley", "state": "Michigan", "district": "11th", "party": "D", "phone": "(202) 225-8171", "status": "SIGNED"},
+            {"name": "Tlaib, Rashida", "state": "Michigan", "district": "12th", "party": "D", "phone": "(202) 225-5126", "status": "SIGNED"},
+            {"name": "Thanedar, Shri", "state": "Michigan", "district": "13th", "party": "D", "phone": "(202) 225-5802", "status": "SIGNED"},
+            {"name": "Finstad, Brad", "state": "Minnesota", "district": "1st", "party": "R", "phone": "(202) 225-2472", "status": "NOT SIGNED"},
+            {"name": "Craig, Angie", "state": "Minnesota", "district": "2nd", "party": "D", "phone": "(202) 225-2271", "status": "SIGNED"},
+            {"name": "Morrison, Kelly", "state": "Minnesota", "district": "3rd", "party": "D", "phone": "(202) 225-2871", "status": "SIGNED"},
+            {"name": "McCollum, Betty", "state": "Minnesota", "district": "4th", "party": "D", "phone": "(202) 225-6631", "status": "SIGNED"},
+            {"name": "Omar, Ilhan", "state": "Minnesota", "district": "5th", "party": "D", "phone": "(202) 225-4755", "status": "SIGNED"},
+            {"name": "Emmer, Tom", "state": "Minnesota", "district": "6th", "party": "R", "phone": "(202) 225-2331", "status": "NOT SIGNED"},
+            {"name": "Fischbach, Michelle", "state": "Minnesota", "district": "7th", "party": "R", "phone": "(202) 225-2165", "status": "NOT SIGNED"},
+            {"name": "Stauber, Pete", "state": "Minnesota", "district": "8th", "party": "R", "phone": "(202) 225-6211", "status": "NOT SIGNED"},
+            {"name": "Kelly, Trent", "state": "Mississippi", "district": "1st", "party": "R", "phone": "(202) 225-4306", "status": "NOT SIGNED"},
+            {"name": "Thompson, Bennie", "state": "Mississippi", "district": "2nd", "party": "D", "phone": "(202) 225-5876", "status": "SIGNED"},
+            {"name": "Guest, Michael", "state": "Mississippi", "district": "3rd", "party": "R", "phone": "(202) 225-5031", "status": "NOT SIGNED"},
+            {"name": "Ezell, Mike", "state": "Mississippi", "district": "4th", "party": "R", "phone": "(202) 225-5772", "status": "NOT SIGNED"},
+            {"name": "Bell, Wesley", "state": "Missouri", "district": "1st", "party": "D", "phone": "(202) 225-2406", "status": "SIGNED"},
+            {"name": "Wagner, Ann", "state": "Missouri", "district": "2nd", "party": "R", "phone": "(202) 225-1621", "status": "NOT SIGNED"},
+            {"name": "Onder, Robert", "state": "Missouri", "district": "3rd", "party": "R", "phone": "(202) 225-2956", "status": "NOT SIGNED"},
+            {"name": "Alford, Mark", "state": "Missouri", "district": "4th", "party": "R", "phone": "(202) 225-2876", "status": "NOT SIGNED"},
+            {"name": "Cleaver, Emanuel", "state": "Missouri", "district": "5th", "party": "D", "phone": "(202) 225-4535", "status": "SIGNED"},
+            {"name": "Graves, Sam", "state": "Missouri", "district": "6th", "party": "R", "phone": "(202) 225-7041", "status": "NOT SIGNED"},
+            {"name": "Burlison, Eric", "state": "Missouri", "district": "7th", "party": "R", "phone": "(202) 225-6536", "status": "NOT SIGNED"},
+            {"name": "Smith, Jason", "state": "Missouri", "district": "8th", "party": "R", "phone": "(202) 225-4404", "status": "NOT SIGNED"},
+            {"name": "Zinke, Ryan", "state": "Montana", "district": "1st", "party": "R", "phone": "(202) 225-5628", "status": "NOT SIGNED"},
+            {"name": "Downing, Troy", "state": "Montana", "district": "2nd", "party": "R", "phone": "(202) 225-3211", "status": "NOT SIGNED"},
+            {"name": "Flood, Mike", "state": "Nebraska", "district": "1st", "party": "R", "phone": "(202) 225-4806", "status": "NOT SIGNED"},
+            {"name": "Bacon, Don", "state": "Nebraska", "district": "2nd", "party": "R", "phone": "(202) 225-4155", "status": "NOT SIGNED"},
+            {"name": "Smith, Adrian", "state": "Nebraska", "district": "3rd", "party": "R", "phone": "(202) 225-6435", "status": "NOT SIGNED"},
+            {"name": "Titus, Dina", "state": "Nevada", "district": "1st", "party": "D", "phone": "(202) 225-5965", "status": "SIGNED"},
+            {"name": "Amodei, Mark", "state": "Nevada", "district": "2nd", "party": "R", "phone": "(202) 225-6155", "status": "NOT SIGNED"},
+            {"name": "Lee, Susie", "state": "Nevada", "district": "3rd", "party": "D", "phone": "(202) 225-3252", "status": "SIGNED"},
+            {"name": "Horsford, Steven", "state": "Nevada", "district": "4th", "party": "D", "phone": "(202) 225-9894", "status": "SIGNED"},
+            {"name": "Pappas, Chris", "state": "New Hampshire", "district": "1st", "party": "D", "phone": "(202) 225-5456", "status": "SIGNED"},
+            {"name": "Goodlander, Maggie", "state": "New Hampshire", "district": "2nd", "party": "D", "phone": "(202) 225-5206", "status": "SIGNED"},
+            {"name": "Norcross, Donald", "state": "New Jersey", "district": "1st", "party": "D", "phone": "(202) 225-6501", "status": "SIGNED"},
+            {"name": "Van Drew, Jefferson", "state": "New Jersey", "district": "2nd", "party": "R", "phone": "(202) 225-6572", "status": "NOT SIGNED"},
+            {"name": "Conaway, Herbert", "state": "New Jersey", "district": "3rd", "party": "D", "phone": "(202) 225-4765", "status": "SIGNED"},
+            {"name": "Smith, Christopher", "state": "New Jersey", "district": "4th", "party": "R", "phone": "(202) 225-3765", "status": "NOT SIGNED"},
+            {"name": "Gottheimer, Josh", "state": "New Jersey", "district": "5th", "party": "D", "phone": "(202) 225-4465", "status": "SIGNED"},
+            {"name": "Pallone, Frank", "state": "New Jersey", "district": "6th", "party": "D", "phone": "(202) 225-4671", "status": "SIGNED"},
+            {"name": "Kean, Thomas", "state": "New Jersey", "district": "7th", "party": "R", "phone": "(202) 225-5361", "status": "NOT SIGNED"},
+            {"name": "Menendez, Robert", "state": "New Jersey", "district": "8th", "party": "D", "phone": "(202) 225-7919", "status": "SIGNED"},
+            {"name": "Pou, Nellie", "state": "New Jersey", "district": "9th", "party": "D", "phone": "(202) 225-5751", "status": "SIGNED"},
+            {"name": "McIver, LaMonica", "state": "New Jersey", "district": "10th", "party": "D", "phone": "(202) 225-3436", "status": "SIGNED"},
+            {"name": "Sherrill, Mikie", "state": "New Jersey", "district": "11th", "party": "D", "phone": "(202) 225-5034", "status": "SIGNED"},
+            {"name": "Watson Coleman, Bonnie", "state": "New Jersey", "district": "12th", "party": "D", "phone": "(202) 225-5801", "status": "SIGNED"},
+            {"name": "Stansbury, Melanie", "state": "New Mexico", "district": "1st", "party": "D", "phone": "(202) 225-6316", "status": "SIGNED"},
+            {"name": "Vasquez, Gabe", "state": "New Mexico", "district": "2nd", "party": "D", "phone": "(202) 225-2365", "status": "SIGNED"},
+            {"name": "Leger Fernandez, Teresa", "state": "New Mexico", "district": "3rd", "party": "D", "phone": "(202) 225-6190", "status": "SIGNED"},
+            {"name": "LaLota, Nick", "state": "New York", "district": "1st", "party": "R", "phone": "(202) 225-3826", "status": "NOT SIGNED"},
+            {"name": "Garbarino, Andrew", "state": "New York", "district": "2nd", "party": "R", "phone": "(202) 225-7896", "status": "NOT SIGNED"},
+            {"name": "Suozzi, Thomas R.", "state": "New York", "district": "3rd", "party": "D", "phone": "(202) 225-3335", "status": "SIGNED"},
+            {"name": "Gillen, Laura", "state": "New York", "district": "4th", "party": "D", "phone": "(202) 225-5516", "status": "SIGNED"},
+            {"name": "Meeks, Gregory", "state": "New York", "district": "5th", "party": "D", "phone": "(202) 225-3461", "status": "SIGNED"},
+            {"name": "Meng, Grace", "state": "New York", "district": "6th", "party": "D", "phone": "(202) 225-2601", "status": "SIGNED"},
+            {"name": "Velazquez, Nydia", "state": "New York", "district": "7th", "party": "D", "phone": "(202) 225-2361", "status": "SIGNED"},
+            {"name": "Jeffries, Hakeem", "state": "New York", "district": "8th", "party": "D", "phone": "(202) 225-5936", "status": "SIGNED"},
+            {"name": "Clarke, Yvette", "state": "New York", "district": "9th", "party": "D", "phone": "(202) 225-6231", "status": "SIGNED"},
+            {"name": "Goldman, Daniel", "state": "New York", "district": "10th", "party": "D", "phone": "(202) 225-7944", "status": "SIGNED"},
+            {"name": "Malliotakis, Nicole", "state": "New York", "district": "11th", "party": "R", "phone": "(202) 225-3371", "status": "NOT SIGNED"},
+            {"name": "Nadler, Jerrold", "state": "New York", "district": "12th", "party": "D", "phone": "(202) 225-5635", "status": "SIGNED"},
+            {"name": "Espaillat, Adriano", "state": "New York", "district": "13th", "party": "D", "phone": "(202) 225-4365", "status": "SIGNED"},
+            {"name": "Ocasio-Cortez, Alexandria", "state": "New York", "district": "14th", "party": "D", "phone": "(202) 225-3965", "status": "SIGNED"},
+            {"name": "Torres, Ritchie", "state": "New York", "district": "15th", "party": "D", "phone": "(202) 225-4361", "status": "SIGNED"},
+            {"name": "Latimer, George", "state": "New York", "district": "16th", "party": "D", "phone": "(202) 225-2464", "status": "SIGNED"},
+            {"name": "Lawler, Michael", "state": "New York", "district": "17th", "party": "R", "phone": "(202) 225-6506", "status": "NOT SIGNED"},
+            {"name": "Ryan, Patrick", "state": "New York", "district": "18th", "party": "D", "phone": "(202) 225-5614", "status": "SIGNED"},
+            {"name": "Riley, Josh", "state": "New York", "district": "19th", "party": "D", "phone": "(202) 225-5441", "status": "SIGNED"},
+            {"name": "Tonko, Paul", "state": "New York", "district": "20th", "party": "D", "phone": "(202) 225-5076", "status": "SIGNED"},
+            {"name": "Stefanik, Elise", "state": "New York", "district": "21st", "party": "R", "phone": "(202) 225-4611", "status": "NOT SIGNED"},
+            {"name": "Mannion, John", "state": "New York", "district": "22nd", "party": "D", "phone": "(202) 225-3701", "status": "SIGNED"},
+            {"name": "Langworthy, Nicholas", "state": "New York", "district": "23rd", "party": "R", "phone": "(202) 225-3161", "status": "NOT SIGNED"},
+            {"name": "Tenney, Claudia", "state": "New York", "district": "24th", "party": "R", "phone": "(202) 225-3665", "status": "NOT SIGNED"},
+            {"name": "Morelle, Joseph", "state": "New York", "district": "25th", "party": "D", "phone": "(202) 225-3615", "status": "SIGNED"},
+            {"name": "Kennedy, Timothy", "state": "New York", "district": "26th", "party": "D", "phone": "(202) 225-3306", "status": "SIGNED"},
+            {"name": "Davis, Donald", "state": "North Carolina", "district": "1st", "party": "D", "phone": "(202) 225-3101", "status": "SIGNED"},
+            {"name": "Ross, Deborah", "state": "North Carolina", "district": "2nd", "party": "D", "phone": "(202) 225-3032", "status": "SIGNED"},
+            {"name": "Murphy, Gregory", "state": "North Carolina", "district": "3rd", "party": "R", "phone": "(202) 225-3415", "status": "NOT SIGNED"},
+            {"name": "Foushee, Valerie", "state": "North Carolina", "district": "4th", "party": "D", "phone": "(202) 225-1784", "status": "SIGNED"},
+            {"name": "Foxx, Virginia", "state": "North Carolina", "district": "5th", "party": "R", "phone": "(202) 225-2071", "status": "NOT SIGNED"},
+            {"name": "McDowell, Addison", "state": "North Carolina", "district": "6th", "party": "R", "phone": "(202) 225-3065", "status": "NOT SIGNED"},
+            {"name": "Rouzer, David", "state": "North Carolina", "district": "7th", "party": "R", "phone": "(202) 225-2731", "status": "NOT SIGNED"},
+            {"name": "Harris, Mark", "state": "North Carolina", "district": "8th", "party": "R", "phone": "(202) 225-1976", "status": "NOT SIGNED"},
+            {"name": "Hudson, Richard", "state": "North Carolina", "district": "9th", "party": "R", "phone": "(202) 225-3715", "status": "NOT SIGNED"},
+            {"name": "Harrigan, Pat", "state": "North Carolina", "district": "10th", "party": "R", "phone": "(202) 225-2576", "status": "NOT SIGNED"},
+            {"name": "Edwards, Chuck", "state": "North Carolina", "district": "11th", "party": "R", "phone": "(202) 225-6401", "status": "NOT SIGNED"},
+            {"name": "Adams, Alma", "state": "North Carolina", "district": "12th", "party": "D", "phone": "(202) 225-1510", "status": "SIGNED"},
+            {"name": "Knott, Brad", "state": "North Carolina", "district": "13th", "party": "R", "phone": "(202) 225-4531", "status": "NOT SIGNED"},
+            {"name": "Moore, Tim", "state": "North Carolina", "district": "14th", "party": "R", "phone": "(202) 225-5634", "status": "NOT SIGNED"},
+            {"name": "Fedorchak, Julie", "state": "North Dakota", "district": "At Large", "party": "R", "phone": "(202) 225-2611", "status": "NOT SIGNED"},
+            {"name": "King-Hinds, Kimberlyn", "state": "Northern Mariana Islands", "district": "Delegate", "party": "R", "phone": "(202) 225-2646", "status": "NOT SIGNED"},
+            {"name": "Landsman, Greg", "state": "Ohio", "district": "1st", "party": "D", "phone": "(202) 225-2216", "status": "SIGNED"},
+            {"name": "Taylor, David", "state": "Ohio", "district": "2nd", "party": "R", "phone": "(202) 225-3164", "status": "NOT SIGNED"},
+            {"name": "Beatty, Joyce", "state": "Ohio", "district": "3rd", "party": "D", "phone": "(202) 225-4324", "status": "SIGNED"},
+            {"name": "Jordan, Jim", "state": "Ohio", "district": "4th", "party": "R", "phone": "(202) 225-2676", "status": "NOT SIGNED"},
+            {"name": "Latta, Robert", "state": "Ohio", "district": "5th", "party": "R", "phone": "(202) 225-6405", "status": "NOT SIGNED"},
+            {"name": "Rulli, Michael A.", "state": "Ohio", "district": "6th", "party": "R", "phone": "(202) 225-5705", "status": "NOT SIGNED"},
+            {"name": "Miller, Max", "state": "Ohio", "district": "7th", "party": "R", "phone": "(202) 225-3876", "status": "NOT SIGNED"},
+            {"name": "Davidson, Warren", "state": "Ohio", "district": "8th", "party": "R", "phone": "(202) 225-6205", "status": "NOT SIGNED"},
+            {"name": "Kaptur, Marcy", "state": "Ohio", "district": "9th", "party": "D", "phone": "(202) 225-4146", "status": "SIGNED"},
+            {"name": "Turner, Michael", "state": "Ohio", "district": "10th", "party": "R", "phone": "(202) 225-6465", "status": "NOT SIGNED"},
+            {"name": "Brown, Shontel", "state": "Ohio", "district": "11th", "party": "D", "phone": "(202) 225-7032", "status": "SIGNED"},
+            {"name": "Balderson, Troy", "state": "Ohio", "district": "12th", "party": "R", "phone": "(202) 225-5355", "status": "NOT SIGNED"},
+            {"name": "Sykes, Emilia", "state": "Ohio", "district": "13th", "party": "D", "phone": "(202) 225-6265", "status": "SIGNED"},
+            {"name": "Joyce, David", "state": "Ohio", "district": "14th", "party": "R", "phone": "(202) 225-5731", "status": "NOT SIGNED"},
+            {"name": "Carey, Mike", "state": "Ohio", "district": "15th", "party": "R", "phone": "(202) 225-2015", "status": "NOT SIGNED"},
+            {"name": "Hern, Kevin", "state": "Oklahoma", "district": "1st", "party": "R", "phone": "(202) 225-2211", "status": "NOT SIGNED"},
+            {"name": "Brecheen, Josh", "state": "Oklahoma", "district": "2nd", "party": "R", "phone": "(202) 225-2701", "status": "NOT SIGNED"},
+            {"name": "Lucas, Frank", "state": "Oklahoma", "district": "3rd", "party": "R", "phone": "(202) 225-5565", "status": "NOT SIGNED"},
+            {"name": "Cole, Tom", "state": "Oklahoma", "district": "4th", "party": "R", "phone": "(202) 225-6165", "status": "NOT SIGNED"},
+            {"name": "Bice, Stephanie", "state": "Oklahoma", "district": "5th", "party": "R", "phone": "(202) 225-2132", "status": "NOT SIGNED"},
+            {"name": "Bonamici, Suzanne", "state": "Oregon", "district": "1st", "party": "D", "phone": "(202) 225-0855", "status": "SIGNED"},
+            {"name": "Bentz, Cliff", "state": "Oregon", "district": "2nd", "party": "R", "phone": "(202) 225-6730", "status": "NOT SIGNED"},
+            {"name": "Dexter, Maxine", "state": "Oregon", "district": "3rd", "party": "D", "phone": "(202) 225-4811", "status": "SIGNED"},
+            {"name": "Hoyle, Val", "state": "Oregon", "district": "4th", "party": "D", "phone": "(202) 225-6416", "status": "SIGNED"},
+            {"name": "Bynum, Janelle", "state": "Oregon", "district": "5th", "party": "D", "phone": "(202) 225-5711", "status": "SIGNED"},
+            {"name": "Salinas, Andrea", "state": "Oregon", "district": "6th", "party": "D", "phone": "(202) 225-5643", "status": "SIGNED"},
+            {"name": "Fitzpatrick, Brian", "state": "Pennsylvania", "district": "1st", "party": "R", "phone": "(202) 225-4276", "status": "NOT SIGNED"},
+            {"name": "Boyle, Brendan", "state": "Pennsylvania", "district": "2nd", "party": "D", "phone": "(202) 225-6111", "status": "SIGNED"},
+            {"name": "Evans, Dwight", "state": "Pennsylvania", "district": "3rd", "party": "D", "phone": "(202) 225-4001", "status": "SIGNED"},
+            {"name": "Dean, Madeleine", "state": "Pennsylvania", "district": "4th", "party": "D", "phone": "(202) 225-4731", "status": "SIGNED"},
+            {"name": "Scanlon, Mary Gay", "state": "Pennsylvania", "district": "5th", "party": "D", "phone": "(202) 225-2011", "status": "SIGNED"},
+            {"name": "Houlahan, Chrissy", "state": "Pennsylvania", "district": "6th", "party": "D", "phone": "(202) 225-4315", "status": "SIGNED"},
+            {"name": "Mackenzie, Ryan", "state": "Pennsylvania", "district": "7th", "party": "R", "phone": "(202) 225-6411", "status": "NOT SIGNED"},
+            {"name": "Bresnahan, Robert", "state": "Pennsylvania", "district": "8th", "party": "R", "phone": "(202) 225-5546", "status": "NOT SIGNED"},
+            {"name": "Meuser, Daniel", "state": "Pennsylvania", "district": "9th", "party": "R", "phone": "(202) 225-6511", "status": "NOT SIGNED"},
+            {"name": "Perry, Scott", "state": "Pennsylvania", "district": "10th", "party": "R", "phone": "(202) 225-5836", "status": "NOT SIGNED"},
+            {"name": "Smucker, Lloyd", "state": "Pennsylvania", "district": "11th", "party": "R", "phone": "(202) 225-2411", "status": "NOT SIGNED"},
+            {"name": "Lee, Summer", "state": "Pennsylvania", "district": "12th", "party": "D", "phone": "(202) 225-2135", "status": "SIGNED"},
+            {"name": "Joyce, John", "state": "Pennsylvania", "district": "13th", "party": "R", "phone": "(202) 225-2431", "status": "NOT SIGNED"},
+            {"name": "Reschenthaler, Guy", "state": "Pennsylvania", "district": "14th", "party": "R", "phone": "(202) 225-2065", "status": "NOT SIGNED"},
+            {"name": "Thompson, Glenn", "state": "Pennsylvania", "district": "15th", "party": "R", "phone": "(202) 225-5121", "status": "NOT SIGNED"},
+            {"name": "Kelly, Mike", "state": "Pennsylvania", "district": "16th", "party": "R", "phone": "(202) 225-5406", "status": "NOT SIGNED"},
+            {"name": "Deluzio, Christopher", "state": "Pennsylvania", "district": "17th", "party": "D", "phone": "(202) 225-2301", "status": "SIGNED"},
+            {"name": "Hernandez, Pablo", "state": "Puerto Rico", "district": "Resident Commissioner", "party": "D", "phone": "(202) 225-2615", "status": "SIGNED"},
+            {"name": "Amo, Gabe", "state": "Rhode Island", "district": "1st", "party": "D", "phone": "(202) 225-4911", "status": "SIGNED"},
+            {"name": "Magaziner, Seth", "state": "Rhode Island", "district": "2nd", "party": "D", "phone": "(202) 225-2735", "status": "SIGNED"},
+            {"name": "Mace, Nancy", "state": "South Carolina", "district": "1st", "party": "R", "phone": "(202) 225-3176", "status": "SIGNED"},
+            {"name": "Wilson, Joe", "state": "South Carolina", "district": "2nd", "party": "R", "phone": "(202) 225-2452", "status": "NOT SIGNED"},
+            {"name": "Biggs, Sheri", "state": "South Carolina", "district": "3rd", "party": "R", "phone": "(202) 225-5301", "status": "NOT SIGNED"},
+            {"name": "Timmons, William", "state": "South Carolina", "district": "4th", "party": "R", "phone": "(202) 225-6030", "status": "NOT SIGNED"},
+            {"name": "Norman, Ralph", "state": "South Carolina", "district": "5th", "party": "R", "phone": "(202) 225-5501", "status": "NOT SIGNED"},
+            {"name": "Clyburn, James", "state": "South Carolina", "district": "6th", "party": "D", "phone": "(202) 225-3315", "status": "SIGNED"},
+            {"name": "Fry, Russell", "state": "South Carolina", "district": "7th", "party": "R", "phone": "(202) 225-9895", "status": "NOT SIGNED"},
+            {"name": "Johnson, Dusty", "state": "South Dakota", "district": "At Large", "party": "R", "phone": "(202) 225-2801", "status": "NOT SIGNED"},
+            {"name": "Harshbarger, Diana", "state": "Tennessee", "district": "1st", "party": "R", "phone": "(202) 225-6356", "status": "NOT SIGNED"},
+            {"name": "Burchett, Tim", "state": "Tennessee", "district": "2nd", "party": "R", "phone": "(202) 225-5435", "status": "NOT SIGNED"},
+            {"name": "Fleischmann, Charles", "state": "Tennessee", "district": "3rd", "party": "R", "phone": "(202) 225-3271", "status": "NOT SIGNED"},
+            {"name": "DesJarlais, Scott", "state": "Tennessee", "district": "4th", "party": "R", "phone": "(202) 225-6831", "status": "NOT SIGNED"},
+            {"name": "Ogles, Andrew", "state": "Tennessee", "district": "5th", "party": "R", "phone": "(202) 225-4311", "status": "NOT SIGNED"},
+            {"name": "Rose, John", "state": "Tennessee", "district": "6th", "party": "R", "phone": "(202) 225-4231", "status": "NOT SIGNED"},
+            {"name": "Green, Mark E.- Vacancy", "state": "Tennessee", "district": "7th", "party": "R", "phone": "(202) 225-2811", "status": "VACANCY"},
+            {"name": "Kustoff, David", "state": "Tennessee", "district": "8th", "party": "R", "phone": "(202) 225-4714", "status": "NOT SIGNED"},
+            {"name": "Cohen, Steve", "state": "Tennessee", "district": "9th", "party": "D", "phone": "(202) 225-3265", "status": "SIGNED"},
+            {"name": "Moran, Nathaniel", "state": "Texas", "district": "1st", "party": "R", "phone": "(202) 225-3035", "status": "NOT SIGNED"},
+            {"name": "Crenshaw, Dan", "state": "Texas", "district": "2nd", "party": "R", "phone": "(202) 225-6565", "status": "NOT SIGNED"},
+            {"name": "Self, Keith", "state": "Texas", "district": "3rd", "party": "R", "phone": "(202) 225-4201", "status": "NOT SIGNED"},
+            {"name": "Fallon, Pat", "state": "Texas", "district": "4th", "party": "R", "phone": "(202) 225-6673", "status": "NOT SIGNED"},
+            {"name": "Gooden, Lance", "state": "Texas", "district": "5th", "party": "R", "phone": "(202) 225-3484", "status": "NOT SIGNED"},
+            {"name": "Ellzey, Jake", "state": "Texas", "district": "6th", "party": "R", "phone": "(202) 225-2002", "status": "NOT SIGNED"},
+            {"name": "Fletcher, Lizzie", "state": "Texas", "district": "7th", "party": "D", "phone": "(202) 225-2571", "status": "SIGNED"},
+            {"name": "Luttrell, Morgan", "state": "Texas", "district": "8th", "party": "R", "phone": "(202) 225-4901", "status": "NOT SIGNED"},
+            {"name": "Green, Al", "state": "Texas", "district": "9th", "party": "D", "phone": "(202) 225-7508", "status": "SIGNED"},
+            {"name": "McCaul, Michael", "state": "Texas", "district": "10th", "party": "R", "phone": "(202) 225-2401", "status": "NOT SIGNED"},
+            {"name": "Pfluger, August", "state": "Texas", "district": "11th", "party": "R", "phone": "(202) 225-3605", "status": "NOT SIGNED"},
+            {"name": "Goldman, Craig", "state": "Texas", "district": "12th", "party": "R", "phone": "(202) 225-5071", "status": "NOT SIGNED"},
+            {"name": "Jackson, Ronny", "state": "Texas", "district": "13th", "party": "R", "phone": "(202) 225-3706", "status": "NOT SIGNED"},
+            {"name": "Weber, Randy", "state": "Texas", "district": "14th", "party": "R", "phone": "(202) 225-2831", "status": "NOT SIGNED"},
+            {"name": "De La Cruz, Monica", "state": "Texas", "district": "15th", "party": "R", "phone": "(202) 225-9901", "status": "NOT SIGNED"},
+            {"name": "Escobar, Veronica", "state": "Texas", "district": "16th", "party": "D", "phone": "(202) 225-4831", "status": "SIGNED"},
+            {"name": "Sessions, Pete", "state": "Texas", "district": "17th", "party": "R", "phone": "(202) 225-6105", "status": "NOT SIGNED"},
+            {"name": "Turner, Sylvester- Vacancy", "state": "Texas", "district": "18th", "party": "D", "phone": "(202) 225-3816", "status": "VACANCY"},
+            {"name": "Arrington, Jodey", "state": "Texas", "district": "19th", "party": "R", "phone": "(202) 225-4005", "status": "NOT SIGNED"},
+            {"name": "Castro, Joaquin", "state": "Texas", "district": "20th", "party": "D", "phone": "(202) 225-3236", "status": "SIGNED"},
+            {"name": "Roy, Chip", "state": "Texas", "district": "21st", "party": "R", "phone": "(202) 225-4236", "status": "NOT SIGNED"},
+            {"name": "Nehls, Troy", "state": "Texas", "district": "22nd", "party": "R", "phone": "(202) 225-5951", "status": "NOT SIGNED"},
+            {"name": "Gonzales, Tony", "state": "Texas", "district": "23rd", "party": "R", "phone": "(202) 225-4511", "status": "NOT SIGNED"},
+            {"name": "Van Duyne, Beth", "state": "Texas", "district": "24th", "party": "R", "phone": "(202) 225-6605", "status": "NOT SIGNED"},
+            {"name": "Williams, Roger", "state": "Texas", "district": "25th", "party": "R", "phone": "(202) 225-9896", "status": "NOT SIGNED"},
+            {"name": "Gill, Brandon", "state": "Texas", "district": "26th", "party": "R", "phone": "(202) 225-7772", "status": "NOT SIGNED"},
+            {"name": "Cloud, Michael", "state": "Texas", "district": "27th", "party": "R", "phone": "(202) 225-7742", "status": "NOT SIGNED"},
+            {"name": "Cuellar, Henry", "state": "Texas", "district": "28th", "party": "D", "phone": "(202) 225-1640", "status": "SIGNED"},
+            {"name": "Garcia, Sylvia", "state": "Texas", "district": "29th", "party": "D", "phone": "(202) 225-1688", "status": "SIGNED"},
+            {"name": "Crockett, Jasmine", "state": "Texas", "district": "30th", "party": "D", "phone": "(202) 225-8885", "status": "SIGNED"},
+            {"name": "Carter, John", "state": "Texas", "district": "31st", "party": "R", "phone": "(202) 225-3864", "status": "NOT SIGNED"},
+            {"name": "Johnson, Julie", "state": "Texas", "district": "32nd", "party": "D", "phone": "(202) 225-2231", "status": "SIGNED"},
+            {"name": "Veasey, Marc", "state": "Texas", "district": "33rd", "party": "D", "phone": "(202) 225-9897", "status": "SIGNED"},
+            {"name": "Gonzalez, Vicente", "state": "Texas", "district": "34th", "party": "D", "phone": "(202) 225-2531", "status": "SIGNED"},
+            {"name": "Casar, Greg", "state": "Texas", "district": "35th", "party": "D", "phone": "(202) 225-5645", "status": "SIGNED"},
+            {"name": "Babin, Brian", "state": "Texas", "district": "36th", "party": "R", "phone": "(202) 225-1555", "status": "NOT SIGNED"},
+            {"name": "Doggett, Lloyd", "state": "Texas", "district": "37th", "party": "D", "phone": "(202) 225-4865", "status": "SIGNED"},
+            {"name": "Hunt, Wesley", "state": "Texas", "district": "38th", "party": "R", "phone": "(202) 225-5646", "status": "NOT SIGNED"},
+            {"name": "Moore, Blake", "state": "Utah", "district": "1st", "party": "R", "phone": "(202) 225-0453", "status": "NOT SIGNED"},
+            {"name": "Maloy, Celeste", "state": "Utah", "district": "2nd", "party": "R", "phone": "(202) 225-9730", "status": "NOT SIGNED"},
+            {"name": "Kennedy, Mike", "state": "Utah", "district": "3rd", "party": "R", "phone": "(202) 225-7751", "status": "NOT SIGNED"},
+            {"name": "Owens, Burgess", "state": "Utah", "district": "4th", "party": "R", "phone": "(202) 225-3011", "status": "NOT SIGNED"},
+            {"name": "Balint, Becca", "state": "Vermont", "district": "At Large", "party": "D", "phone": "(202) 225-4115", "status": "SIGNED"},
+            {"name": "Wittman, Robert", "state": "Virginia", "district": "1st", "party": "R", "phone": "(202) 225-4261", "status": "NOT SIGNED"},
+            {"name": "Kiggans, Jennifer", "state": "Virginia", "district": "2nd", "party": "R", "phone": "(202) 225-4215", "status": "NOT SIGNED"},
+            {"name": "Scott, Robert", "state": "Virginia", "district": "3rd", "party": "D", "phone": "(202) 225-8351", "status": "SIGNED"},
+            {"name": "McClellan, Jennifer", "state": "Virginia", "district": "4th", "party": "D", "phone": "(202) 225-6365", "status": "SIGNED"},
+            {"name": "McGuire, John", "state": "Virginia", "district": "5th", "party": "R", "phone": "(202) 225-4711", "status": "NOT SIGNED"},
+            {"name": "Cline, Ben", "state": "Virginia", "district": "6th", "party": "R", "phone": "(202) 225-5431", "status": "NOT SIGNED"},
+            {"name": "Vindman, Eugene", "state": "Virginia", "district": "7th", "party": "D", "phone": "(202) 225-2815", "status": "SIGNED"},
+            {"name": "Beyer, Donald", "state": "Virginia", "district": "8th", "party": "D", "phone": "(202) 225-4376", "status": "SIGNED"},
+            {"name": "Griffith, H.", "state": "Virginia", "district": "9th", "party": "R", "phone": "(202) 225-3861", "status": "NOT SIGNED"},
+            {"name": "Subramanyam, Suhas", "state": "Virginia", "district": "10th", "party": "D", "phone": "(202) 225-5136", "status": "SIGNED"},
+            {"name": "Connolly, Gerald E.- Vacancy", "state": "Virginia", "district": "11th", "party": "D", "phone": "(202) 225-1492", "status": "VACANCY"},
+            {"name": "Plaskett, Stacey", "state": "Virgin Islands", "district": "Delegate", "party": "D", "phone": "(202) 225-1790", "status": "SIGNED"},
+            {"name": "DelBene, Suzan", "state": "Washington", "district": "1st", "party": "D", "phone": "(202) 225-6311", "status": "SIGNED"},
+            {"name": "Larsen, Rick", "state": "Washington", "district": "2nd", "party": "D", "phone": "(202) 225-2605", "status": "SIGNED"},
+            {"name": "Perez, Marie", "state": "Washington", "district": "3rd", "party": "D", "phone": "(202) 225-3536", "status": "SIGNED"},
+            {"name": "Newhouse, Dan", "state": "Washington", "district": "4th", "party": "R", "phone": "(202) 225-5816", "status": "NOT SIGNED"},
+            {"name": "Baumgartner, Michael", "state": "Washington", "district": "5th", "party": "R", "phone": "(202) 225-2006", "status": "NOT SIGNED"},
+            {"name": "Randall, Emily", "state": "Washington", "district": "6th", "party": "D", "phone": "(202) 225-5916", "status": "SIGNED"},
+            {"name": "Jayapal, Pramila", "state": "Washington", "district": "7th", "party": "D", "phone": "(202) 225-3106", "status": "SIGNED"},
+            {"name": "Schrier, Kim", "state": "Washington", "district": "8th", "party": "D", "phone": "(202) 225-7761", "status": "SIGNED"},
+            {"name": "Smith, Adam", "state": "Washington", "district": "9th", "party": "D", "phone": "(202) 225-8901", "status": "SIGNED"},
+            {"name": "Strickland, Marilyn", "state": "Washington", "district": "10th", "party": "D", "phone": "(202) 225-9740", "status": "SIGNED"},
+            {"name": "Miller, Carol", "state": "West Virginia", "district": "1st", "party": "R", "phone": "(202) 225-3452", "status": "NOT SIGNED"},
+            {"name": "Moore, Riley", "state": "West Virginia", "district": "2nd", "party": "R", "phone": "(202) 225-2711", "status": "NOT SIGNED"},
+            {"name": "Steil, Bryan", "state": "Wisconsin", "district": "1st", "party": "R", "phone": "(202) 225-3031", "status": "NOT SIGNED"},
+            {"name": "Pocan, Mark", "state": "Wisconsin", "district": "2nd", "party": "D", "phone": "(202) 225-2906", "status": "SIGNED"},
+            {"name": "Van Orden, Derrick", "state": "Wisconsin", "district": "3rd", "party": "R", "phone": "(202) 225-5506", "status": "NOT SIGNED"},
+            {"name": "Moore, Gwen", "state": "Wisconsin", "district": "4th", "party": "D", "phone": "(202) 225-4572", "status": "SIGNED"},
+            {"name": "Fitzgerald, Scott", "state": "Wisconsin", "district": "5th", "party": "R", "phone": "(202) 225-5101", "status": "NOT SIGNED"},
+            {"name": "Grothman, Glenn", "state": "Wisconsin", "district": "6th", "party": "R", "phone": "(202) 225-2476", "status": "NOT SIGNED"},
+            {"name": "Tiffany, Thomas", "state": "Wisconsin", "district": "7th", "party": "R", "phone": "(202) 225-3365", "status": "NOT SIGNED"},
+            {"name": "Wied, Tony", "state": "Wisconsin", "district": "8th", "party": "R", "phone": "(202) 225-5665", "status": "NOT SIGNED"},
+            {"name": "Hageman, Harriet", "state": "Wyoming", "district": "At Large", "party": "R", "phone": "(202) 225-2311", "status": "NOT SIGNED"}
+        ];
+
+        let filteredData = representatives;
+
+        function renderTable(data) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            data.forEach(rep => {
+                const row = document.createElement('tr');
+                
+                let statusClass = 'status-not-signed';
+                let statusText = rep.status;
+                
+                if (rep.status === 'SIGNED') {
+                    statusClass = 'status-signed';
+                } else if (rep.status === 'VACANCY') {
+                    statusClass = 'status-unknown';
+                    statusText = 'VACANT';
+                }
+
+                row.innerHTML = `
+                    <td><strong>${rep.name}</strong></td>
+                    <td>${rep.state}</td>
+                    <td>${rep.district}</td>
+                    <td><span class="party-${rep.party.toLowerCase()}">${rep.party}</span></td>
+                    <td><a href="tel:${rep.phone}" class="phone-link">${rep.phone}</a></td>
+                    <td><span class="status-badge ${statusClass}">${statusText}</span></td>
+                `;
+                
+                tbody.appendChild(row);
+            });
+        }
+
+        function filterData() {
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+
+            filteredData = representatives.filter(rep => {
+                const matchesSearch = 
+                    rep.name.toLowerCase().includes(searchTerm) ||
+                    rep.state.toLowerCase().includes(searchTerm) ||
+                    rep.district.toLowerCase().includes(searchTerm);
+
+                const matchesFilter = 
+                    activeFilter === 'all' ||
+                    (activeFilter === 'signed' && rep.status === 'SIGNED') ||
+                    (activeFilter === 'not-signed' && rep.status === 'NOT SIGNED') ||
+                    (activeFilter === 'republican' && rep.party === 'R') ||
+                    (activeFilter === 'democrat' && rep.party === 'D');
+
+                return matchesSearch && matchesFilter;
+            });
+
+            renderTable(filteredData);
+            updateCounts();
+        }
+
+        function updateCounts() {
+            // Current count: 217 signatures as of Nov 12, 2025 - Grijalva swearing in tomorrow for 218th
+            const signedCount = 217;
+            const neededCount = 218 - signedCount;
+
+            document.getElementById('signed-count').textContent = signedCount;
+            document.getElementById('needed-count').textContent = Math.max(0, neededCount);
+        }
+
+        // Event listeners
+        document.getElementById('searchBox').addEventListener('input', filterData);
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                filterData();
+            });
+        });
+
+        // Initial render
+        renderTable(representatives);
+        updateCounts();
+    </script>
+</body>
+</html>
