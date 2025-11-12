@@ -1,0 +1,153 @@
+{
+  "last_updated": "2025-09-03T18:00:00Z",
+  "total_needed": 218,
+  "total_current": 134,
+  "republicans": {
+    "signed": [
+      {
+        "name": "Thomas Massie",
+        "district": "KY-04",
+        "date": "2025-09-01",
+        "source": "Official statement"
+      },
+      {
+        "name": "Nancy Mace",
+        "district": "SC-01",
+        "date": "2025-09-02",
+        "source": "Press release"
+      },
+      {
+        "name": "Marjorie Taylor Greene",
+        "district": "GA-14",
+        "date": "2025-09-02",
+        "source": "Twitter announcement"
+      },
+      {
+        "name": "Lauren Boebert",
+        "district": "CO-04",
+        "date": "2025-09-03",
+        "source": "House floor statement"
+      }
+    ],
+    "targets": [
+      {
+        "name": "Jeff Van Drew",
+        "district": "NJ-02",
+        "phone": "202-225-6572",
+        "twitter": "@CongressmanJVD",
+        "priority": 1,
+        "current_position": "CO-SPONSORED H.R. 185 but won't sign discharge petition",
+        "talking_points": [
+          "Actually co-sponsored the transparency bill (H.R. 185)",
+          "Now claims concerns about 'harm to innocent people'",
+          "The bill you co-sponsored has victim protections",
+          "This is the definition of political hypocrisy"
+        ]
+      },
+      {
+        "name": "Jen Kiggans",
+        "district": "VA-02",
+        "phone": "202-225-4215",
+        "twitter": "@JenKiggans",
+        "priority": 1,
+        "current_position": "Chairs VA Oversight & Investigations Subcommittee",
+        "talking_points": [
+          "Your job is literally oversight and investigations",
+          "Voted to expel Santos for 'highest ethical standards'",
+          "Navy veteran who champions accountability",
+          "Won by only 4% margin - constituents watching"
+        ]
+      },
+      {
+        "name": "Young Kim",
+        "district": "CA-40",
+        "phone": "202-225-4111",
+        "twitter": "@RepYoungKim",
+        "priority": 1,
+        "current_position": "No public position",
+        "talking_points": [
+          "Anti-trafficking task force leader",
+          "OC Register endorsed transparency",
+          "Competitive district (won by 5%)",
+          "Your silence while colleagues act is notable"
+        ]
+      },
+      {
+        "name": "Ashley Hinson",
+        "district": "IA-02",
+        "phone": "202-225-2911",
+        "twitter": "@RepAshleyHinson",
+        "priority": 2,
+        "current_position": "OPPOSED in July, said 'trust the administration'",
+        "talking_points": [
+          "DNC ran ads against you for opposing transparency",
+          "Trusting isn't verifying - Reagan would disagree",
+          "Judiciary Committee should champion oversight",
+          "Swing district voters want accountability, not excuses"
+        ]
+      },
+      {
+        "name": "Maria Elvira Salazar",
+        "district": "FL-27",
+        "phone": "202-225-3931",
+        "twitter": "@RepMariaSalazar",
+        "priority": 2,
+        "current_position": "No public position",
+        "talking_points": [
+          "Miami district directly affected by trafficking",
+          "Former investigative journalist - you know transparency matters",
+          "Anti-trafficking advocate - act like one",
+          "Your constituents deserve the truth"
+        ]
+      },
+      {
+        "name": "Brian Fitzpatrick",
+        "district": "PA-01",
+        "phone": "202-225-4276",
+        "twitter": "@RepBrianFitz",
+        "priority": 1,
+        "current_position": "No public position - surprising given bipartisan record",
+        "talking_points": [
+          "Former FBI agent - you understand evidence matters",
+          "Problem Solvers Caucus co-chair - this IS bipartisan",
+          "Most bipartisan House member - prove it here",
+          "Massie AND Khanna together - your kind of issue"
+        ]
+      },
+      {
+        "name": "Don Bacon",
+        "district": "NE-02",
+        "phone": "202-225-4155",
+        "twitter": "@RepDonBacon",
+        "priority": 3,
+        "current_position": "No public position",
+        "talking_points": [
+          "Retired Air Force General - transparency is patriotic",
+          "Biden district Republican - independence matters",
+          "Problem Solvers Caucus - solve this problem",
+          "Nebraska values honesty - show it"
+        ]
+      }
+    ],
+    "unlikely": [
+      {
+        "name": "Speaker Mike Johnson",
+        "district": "LA-04",
+        "reason": "Controls floor schedule"
+      }
+    ]
+  },
+  "democrats": {
+    "signed_count": 130,
+    "expected_total": 212,
+    "holdouts": [
+      "Leadership positions pending confirmation"
+    ]
+  },
+  "discharge_petition": {
+    "number": "119-1",
+    "filed_date": "2025-09-03",
+    "sponsor": "Rep. Thomas Massie",
+    "bill": "H.R. 185"
+  }
+}

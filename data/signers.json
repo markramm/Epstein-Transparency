@@ -1,0 +1,1966 @@
+{
+  "metadata": {
+    "last_updated": "2025-09-10T15:00:00.000000",
+    "total_signatures": 216,
+    "total_confirmed": 216,
+    "total_pledged": 1,
+    "total_needed": 218,
+    "signatures_remaining": 2,
+    "discharge_petition_number": 9,
+    "congress": 119,
+    "official_source": "https://clerk.house.gov/DischargePetition/2025090209",
+    "note": "216 confirmed signatures as of Sept 8, 2025. Most recent: Eric Swalwell (CA-14). Walkinshaw (VA-11) pledged to sign = 217 total.",
+    "last_scraped": "2025-09-10T15:00:00.000000"
+  },
+  "signers": [
+    {
+      "name": "Thomas Massie",
+      "party": "R",
+      "state": "KY",
+      "district": "04",
+      "date_signed": "2025-09-02",
+      "source_url": "https://twitter.com/RepThomasMassie/status/xxxxx",
+      "notes": "Filed the discharge petition"
+    },
+    {
+      "name": "Nancy Mace",
+      "party": "R",
+      "state": "SC",
+      "district": "01",
+      "date_signed": "2025-09-02",
+      "source_url": "https://twitter.com/RepNancyMace/status/xxxxx",
+      "notes": "Early Republican signer"
+    },
+    {
+      "name": "Marjorie Taylor Greene",
+      "party": "R",
+      "state": "GA",
+      "district": "14",
+      "date_signed": "2025-09-02",
+      "source_url": "Press statement",
+      "notes": "Signed on first day back"
+    },
+    {
+      "name": "Lauren Boebert",
+      "party": "R",
+      "state": "CO",
+      "district": "04",
+      "date_signed": "2025-09-02",
+      "source_url": "Office confirmation",
+      "notes": "Morning of Sept 3"
+    },
+    {
+      "name": "Ro Khanna",
+      "party": "D",
+      "state": "CA",
+      "district": "17",
+      "date_signed": "2025-09-02",
+      "source_url": "Press conference statement",
+      "notes": "Bipartisan co-lead"
+    },
+    {
+      "name": "James P. McGovern",
+      "party": "D",
+      "state": "MA",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Mary Gay Scanlon",
+      "party": "D",
+      "state": "PA",
+      "district": "05",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Joe Courtney",
+      "party": "D",
+      "state": "CT",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Bill Foster",
+      "party": "D",
+      "state": "IL",
+      "district": "11",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Morgan McGarvey",
+      "party": "D",
+      "state": "KY",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Johnny Olszewski",
+      "party": "D",
+      "state": "MD",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Dwight Evans",
+      "party": "D",
+      "state": "PA",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Bonnie Watson Coleman",
+      "party": "D",
+      "state": "NJ",
+      "district": "12",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Sean Casten",
+      "party": "D",
+      "state": "IL",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Kristen McDonald Rivet",
+      "party": "D",
+      "state": "MI",
+      "district": "08",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Janelle S. Bynum",
+      "party": "D",
+      "state": "OR",
+      "district": "05",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Mike Quigley",
+      "party": "D",
+      "state": "IL",
+      "district": "05",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Laura Friedman",
+      "party": "D",
+      "state": "CA",
+      "district": "30",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Chrissy Houlahan",
+      "party": "D",
+      "state": "PA",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Deborah K. Ross",
+      "party": "D",
+      "state": "NC",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Maxine Dexter",
+      "party": "D",
+      "state": "OR",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Cleo Fields",
+      "party": "D",
+      "state": "LA",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Troy A. Carter",
+      "party": "D",
+      "state": "LA",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Bennie G. Thompson",
+      "party": "D",
+      "state": "MS",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Gabe Vasquez",
+      "party": "D",
+      "state": "NM",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Greg Landsman",
+      "party": "D",
+      "state": "OH",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Robert C. \"Bobby\" Scott",
+      "party": "D",
+      "state": "VA",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Becca Balint",
+      "party": "D",
+      "state": "VT",
+      "district": "00",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "George Whitesides",
+      "party": "D",
+      "state": "CA",
+      "district": "27",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Nancy Pelosi",
+      "party": "D",
+      "state": "CA",
+      "district": "11",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jimmy Panetta",
+      "party": "D",
+      "state": "CA",
+      "district": "19",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Josh Gottheimer",
+      "party": "D",
+      "state": "NJ",
+      "district": "05",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Paul Tonko",
+      "party": "D",
+      "state": "NY",
+      "district": "20",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "John W. Mannion",
+      "party": "D",
+      "state": "NY",
+      "district": "22",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Debbie Dingell",
+      "party": "D",
+      "state": "MI",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Yassamin Ansari",
+      "party": "D",
+      "state": "AZ",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Gregory W. Meeks",
+      "party": "D",
+      "state": "NY",
+      "district": "05",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Stephen F. Lynch",
+      "party": "D",
+      "state": "MA",
+      "district": "08",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Thomas R. Suozzi",
+      "party": "D",
+      "state": "NY",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Dave Min",
+      "party": "D",
+      "state": "CA",
+      "district": "47",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Julie Johnson",
+      "party": "D",
+      "state": "TX",
+      "district": "32",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Mark Takano",
+      "party": "D",
+      "state": "CA",
+      "district": "39",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Emily Randall",
+      "party": "D",
+      "state": "WA",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Shomari Figures",
+      "party": "D",
+      "state": "AL",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Nikema Williams",
+      "party": "D",
+      "state": "GA",
+      "district": "05",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Sheila Cherfilus-McCormick",
+      "party": "D",
+      "state": "FL",
+      "district": "20",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jonathan L. Jackson",
+      "party": "D",
+      "state": "IL",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Judy Chu",
+      "party": "D",
+      "state": "CA",
+      "district": "28",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Melanie A. Stansbury",
+      "party": "D",
+      "state": "NM",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "LaMonica McIver",
+      "party": "D",
+      "state": "NJ",
+      "district": "10",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jason Crow",
+      "party": "D",
+      "state": "CO",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Shontel M. Brown",
+      "party": "D",
+      "state": "OH",
+      "district": "11",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jared F. Golden",
+      "party": "D",
+      "state": "ME",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Henry C. \"Hank\" Johnson",
+      "party": "D",
+      "state": "GA",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jill N. Tokuda",
+      "party": "D",
+      "state": "HI",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Adriano Espaillat",
+      "party": "D",
+      "state": "NY",
+      "district": "13",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Andrea Salinas",
+      "party": "D",
+      "state": "OR",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Sarah Elfreth",
+      "party": "D",
+      "state": "MD",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Frederica S. Wilson",
+      "party": "D",
+      "state": "FL",
+      "district": "24",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Patrick Ryan",
+      "party": "D",
+      "state": "NY",
+      "district": "18",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Marilyn Strickland",
+      "party": "D",
+      "state": "WA",
+      "district": "10",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Alexandria Ocasio-Cortez",
+      "party": "D",
+      "state": "NY",
+      "district": "14",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Lois Frankel",
+      "party": "D",
+      "state": "FL",
+      "district": "22",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Kelly Morrison",
+      "party": "D",
+      "state": "MN",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Kathy Castor",
+      "party": "D",
+      "state": "FL",
+      "district": "14",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Gilbert Ray Cisneros",
+      "party": "D",
+      "state": "CA",
+      "district": "31",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "J. Luis Correa",
+      "party": "D",
+      "state": "CA",
+      "district": "46",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jes\u00fas G. \"Chuy\" Garc\u00eda",
+      "party": "D",
+      "state": "IL",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Suhas Subramanyam",
+      "party": "D",
+      "state": "VA",
+      "district": "10",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Norma J. Torres",
+      "party": "D",
+      "state": "CA",
+      "district": "35",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Bradley Scott Schneider",
+      "party": "D",
+      "state": "IL",
+      "district": "10",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Lori Trahan",
+      "party": "D",
+      "state": "MA",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Chris Pappas",
+      "party": "D",
+      "state": "NH",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Alma S. Adams",
+      "party": "D",
+      "state": "NC",
+      "district": "12",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Suzan K. DelBene",
+      "party": "D",
+      "state": "WA",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Nikki Budzinski",
+      "party": "D",
+      "state": "IL",
+      "district": "13",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Marie Gluesenkamp Perez",
+      "party": "D",
+      "state": "WA",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Lucy McBath",
+      "party": "D",
+      "state": "GA",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Veronica Escobar",
+      "party": "D",
+      "state": "TX",
+      "district": "16",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Lizzie Fletcher",
+      "party": "D",
+      "state": "TX",
+      "district": "07",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Greg Stanton",
+      "party": "D",
+      "state": "AZ",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Rashida Tlaib",
+      "party": "D",
+      "state": "MI",
+      "district": "12",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Luz M. Rivas",
+      "party": "D",
+      "state": "CA",
+      "district": "29",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Doris O. Matsui",
+      "party": "D",
+      "state": "CA",
+      "district": "07",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Haley M. Stevens",
+      "party": "D",
+      "state": "MI",
+      "district": "11",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Seth Magaziner",
+      "party": "D",
+      "state": "RI",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Dina Titus",
+      "party": "D",
+      "state": "NV",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Zoe Lofgren",
+      "party": "D",
+      "state": "CA",
+      "district": "18",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Marcy Kaptur",
+      "party": "D",
+      "state": "OH",
+      "district": "09",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Laura Gillen",
+      "party": "D",
+      "state": "NY",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Nellie Pou",
+      "party": "D",
+      "state": "NJ",
+      "district": "09",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Salud O. Carbajal",
+      "party": "D",
+      "state": "CA",
+      "district": "24",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Raja Krishnamoorthi",
+      "party": "D",
+      "state": "IL",
+      "district": "08",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Maggie Goodlander",
+      "party": "D",
+      "state": "NH",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Wesley Bell",
+      "party": "D",
+      "state": "MO",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Kim Schrier",
+      "party": "D",
+      "state": "WA",
+      "district": "08",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Gabe Amo",
+      "party": "D",
+      "state": "RI",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Janice D. Schakowsky",
+      "party": "D",
+      "state": "IL",
+      "district": "09",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Frank J. Mrvan",
+      "party": "D",
+      "state": "IN",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Ayanna Pressley",
+      "party": "D",
+      "state": "MA",
+      "district": "07",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Grace Meng",
+      "party": "D",
+      "state": "NY",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Sarah McBride",
+      "party": "D",
+      "state": "DE",
+      "district": "00",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jared Moskowitz",
+      "party": "D",
+      "state": "FL",
+      "district": "23",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Maxwell Frost",
+      "party": "D",
+      "state": "FL",
+      "district": "10",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Delia C. Ramirez",
+      "party": "D",
+      "state": "IL",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Summer L. Lee",
+      "party": "D",
+      "state": "PA",
+      "district": "12",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jamie Raskin",
+      "party": "D",
+      "state": "MD",
+      "district": "08",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Herbert C. Conaway",
+      "party": "D",
+      "state": "NJ",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Pramila Jayapal",
+      "party": "D",
+      "state": "WA",
+      "district": "07",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Adam Gray",
+      "party": "D",
+      "state": "CA",
+      "district": "13",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Kweisi Mfume",
+      "party": "D",
+      "state": "MD",
+      "district": "07",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "John B. Larson",
+      "party": "D",
+      "state": "CT",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Greg Casar",
+      "party": "D",
+      "state": "TX",
+      "district": "35",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Eugene Simon Vindman",
+      "party": "D",
+      "state": "VA",
+      "district": "07",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Emilia Strong Sykes",
+      "party": "D",
+      "state": "OH",
+      "district": "13",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Sara Jacobs",
+      "party": "D",
+      "state": "CA",
+      "district": "51",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Robert Menendez",
+      "party": "D",
+      "state": "NJ",
+      "district": "08",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Nanette Diaz Barrag\u00e1n",
+      "party": "D",
+      "state": "CA",
+      "district": "44",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jennifer L. McClellan",
+      "party": "D",
+      "state": "VA",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jahana Hayes",
+      "party": "D",
+      "state": "CT",
+      "district": "05",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Joe Neguse",
+      "party": "D",
+      "state": "CO",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Emanuel Cleaver",
+      "party": "D",
+      "state": "MO",
+      "district": "05",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "George Latimer",
+      "party": "D",
+      "state": "NY",
+      "district": "16",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Ilhan Omar",
+      "party": "D",
+      "state": "MN",
+      "district": "05",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Andr\u00e9 Carson",
+      "party": "D",
+      "state": "IN",
+      "district": "07",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jasmine Crockett",
+      "party": "D",
+      "state": "TX",
+      "district": "30",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Al Green",
+      "party": "D",
+      "state": "TX",
+      "district": "09",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Maxine Waters",
+      "party": "D",
+      "state": "CA",
+      "district": "43",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Donald G. Davis",
+      "party": "D",
+      "state": "NC",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Lauren Underwood",
+      "party": "D",
+      "state": "IL",
+      "district": "14",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Steve Cohen",
+      "party": "D",
+      "state": "TN",
+      "district": "09",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Terri A. Sewell",
+      "party": "D",
+      "state": "AL",
+      "district": "07",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Robert Garcia",
+      "party": "D",
+      "state": "CA",
+      "district": "42",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Shri Thanedar",
+      "party": "D",
+      "state": "MI",
+      "district": "13",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Diana DeGette",
+      "party": "D",
+      "state": "CO",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Teresa Leger Fernandez",
+      "party": "D",
+      "state": "NM",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Steven Horsford",
+      "party": "D",
+      "state": "NV",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Brad Sherman",
+      "party": "D",
+      "state": "CA",
+      "district": "32",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Marc A. Veasey",
+      "party": "D",
+      "state": "TX",
+      "district": "33",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Katherine M. Clark",
+      "party": "D",
+      "state": "MA",
+      "district": "05",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Hakeem S. Jeffries",
+      "party": "D",
+      "state": "NY",
+      "district": "08",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Sanford D. Bishop",
+      "party": "D",
+      "state": "GA",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "John Garamendi",
+      "party": "D",
+      "state": "CA",
+      "district": "08",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Derek Tran",
+      "party": "D",
+      "state": "CA",
+      "district": "45",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Brittany Pettersen",
+      "party": "D",
+      "state": "CO",
+      "district": "07",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Brendan F. Boyle",
+      "party": "D",
+      "state": "PA",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Suzanne Bonamici",
+      "party": "D",
+      "state": "OR",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Eric Sorensen",
+      "party": "D",
+      "state": "IL",
+      "district": "17",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Ted Lieu",
+      "party": "D",
+      "state": "CA",
+      "district": "36",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "David Scott",
+      "party": "D",
+      "state": "GA",
+      "district": "13",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Ami Bera",
+      "party": "D",
+      "state": "CA",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Joyce Beatty",
+      "party": "D",
+      "state": "OH",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Julia Brownley",
+      "party": "D",
+      "state": "CA",
+      "district": "26",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Sylvia R. Garcia",
+      "party": "D",
+      "state": "TX",
+      "district": "29",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Donald Norcross",
+      "party": "D",
+      "state": "NJ",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Valerie P. Foushee",
+      "party": "D",
+      "state": "NC",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Christopher R. Deluzio",
+      "party": "D",
+      "state": "PA",
+      "district": "17",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Lateefah Simon",
+      "party": "D",
+      "state": "CA",
+      "district": "12",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Raul Ruiz",
+      "party": "D",
+      "state": "CA",
+      "district": "25",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Ritchie Torres",
+      "party": "D",
+      "state": "NY",
+      "district": "15",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Nydia M. Vel\u00e1zquez",
+      "party": "D",
+      "state": "NY",
+      "district": "07",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Sydney Kamlager-Dove",
+      "party": "D",
+      "state": "CA",
+      "district": "37",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Adam Smith",
+      "party": "D",
+      "state": "WA",
+      "district": "09",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Danny K. Davis",
+      "party": "D",
+      "state": "IL",
+      "district": "07",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Betty McCollum",
+      "party": "D",
+      "state": "MN",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Val T. Hoyle",
+      "party": "D",
+      "state": "OR",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Mike Levin",
+      "party": "D",
+      "state": "CA",
+      "district": "49",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Robin L. Kelly",
+      "party": "D",
+      "state": "IL",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Richard E. Neal",
+      "party": "D",
+      "state": "MA",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Frank Pallone",
+      "party": "D",
+      "state": "NJ",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Glenn Ivey",
+      "party": "D",
+      "state": "MD",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Josh Harder",
+      "party": "D",
+      "state": "CA",
+      "district": "09",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jerrold Nadler",
+      "party": "D",
+      "state": "NY",
+      "district": "12",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Sam T. Liccardo",
+      "party": "D",
+      "state": "CA",
+      "district": "16",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jared Huffman",
+      "party": "D",
+      "state": "CA",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Timothy M. Kennedy",
+      "party": "D",
+      "state": "NY",
+      "district": "26",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Mark Pocan",
+      "party": "D",
+      "state": "WI",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Hillary J. Scholten",
+      "party": "D",
+      "state": "MI",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Darren Soto",
+      "party": "D",
+      "state": "FL",
+      "district": "09",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Susie Lee",
+      "party": "D",
+      "state": "NV",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Yvette D. Clarke",
+      "party": "D",
+      "state": "NY",
+      "district": "09",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Joaquin Castro",
+      "party": "D",
+      "state": "TX",
+      "district": "20",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Mark DeSaulnier",
+      "party": "D",
+      "state": "CA",
+      "district": "10",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Joseph D. Morelle",
+      "party": "D",
+      "state": "NY",
+      "district": "25",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jake Auchincloss",
+      "party": "D",
+      "state": "MA",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Sharice Davids",
+      "party": "D",
+      "state": "KS",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Steny H. Hoyer",
+      "party": "D",
+      "state": "MD",
+      "district": "05",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Kevin Mullin",
+      "party": "D",
+      "state": "CA",
+      "district": "15",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Rosa L. DeLauro",
+      "party": "D",
+      "state": "CT",
+      "district": "03",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Rick Larsen",
+      "party": "D",
+      "state": "WA",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Juan Vargas",
+      "party": "D",
+      "state": "CA",
+      "district": "52",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Donald S. Beyer",
+      "party": "D",
+      "state": "VA",
+      "district": "08",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "James E. Clyburn",
+      "party": "D",
+      "state": "SC",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Debbie Wasserman Schultz",
+      "party": "D",
+      "state": "FL",
+      "district": "25",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "William R. Keating",
+      "party": "D",
+      "state": "MA",
+      "district": "09",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Madeleine Dean",
+      "party": "D",
+      "state": "PA",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Chellie Pingree",
+      "party": "D",
+      "state": "ME",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Josh Riley",
+      "party": "D",
+      "state": "NY",
+      "district": "19",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Scott H. Peters",
+      "party": "D",
+      "state": "CA",
+      "district": "50",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Gwen Moore",
+      "party": "D",
+      "state": "WI",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Seth Moulton",
+      "party": "D",
+      "state": "MA",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "April McClain Delaney",
+      "party": "D",
+      "state": "MD",
+      "district": "06",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Angie Craig",
+      "party": "D",
+      "state": "MN",
+      "district": "02",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Mike Thompson",
+      "party": "D",
+      "state": "CA",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Linda T. S\u00e1nchez",
+      "party": "D",
+      "state": "CA",
+      "district": "38",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jim Costa",
+      "party": "D",
+      "state": "CA",
+      "district": "21",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Jimmy Gomez",
+      "party": "D",
+      "state": "CA",
+      "district": "34",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Pete Aguilar",
+      "party": "D",
+      "state": "CA",
+      "district": "33",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Ed Case",
+      "party": "D",
+      "state": "HI",
+      "district": "01",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Vicente Gonzalez",
+      "party": "D",
+      "state": "TX",
+      "district": "34",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Lloyd Doggett",
+      "party": "D",
+      "state": "TX",
+      "district": "37",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Mikie Sherrill",
+      "party": "D",
+      "state": "NJ",
+      "district": "11",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "James A. Himes",
+      "party": "D",
+      "state": "CT",
+      "district": "04",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Henry Cuellar",
+      "party": "D",
+      "state": "TX",
+      "district": "28",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    },
+    {
+      "name": "Daniel S. Goldman",
+      "party": "D",
+      "state": "NY",
+      "district": "10",
+      "date_signed": "2025-09-04",
+      "source_url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "notes": "Scraped from House Clerk website"
+    }
+  ],
+  "expected_signers": {
+    "democrats": {
+      "expected_count": 130,
+      "total_caucus": 212,
+      "notes": "Most Democrats expected to sign based on caucus statements"
+    },
+    "republicans": {
+      "confirmed_count": 4,
+      "confirmed_signers": ["Thomas Massie (KY-04)", "Nancy Mace (SC-01)", "Lauren Boebert (CO-04)", "Marjorie Taylor Greene (GA-14)"],
+      "needed_additional": 1,
+      "total_caucus": 220,
+      "notes": "Need 1 more Republican with Walkinshaw pledge (216 + 1 = 217, need 218)"
+    }
+  }
+}

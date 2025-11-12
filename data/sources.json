@@ -1,0 +1,114 @@
+{
+  "sources": [
+    {
+      "id": "reuters-presser",
+      "title": "Epstein survivors urge Congress to force disclosure vote",
+      "outlet": "Reuters",
+      "author": "Staff",
+      "date": "2025-09-03",
+      "url": "https://www.reuters.com/world/us/epstein-survivors-congress-disclosure-2025-09-03/",
+      "archive_url": null,
+      "type": "news",
+      "key_facts": [
+        "Survivors held Capitol press conference",
+        "Marina Lacerda spoke publicly for first time",
+        "Discharge petition filed by Rep. Massie"
+      ]
+    },
+    {
+      "id": "guardian-presser",
+      "title": "Survivors demand transparency at Capitol press conference",
+      "outlet": "The Guardian",
+      "author": "Staff",
+      "date": "2025-09-03",
+      "url": "https://www.theguardian.com/us-news/2025/sep/03/epstein-files-survivors-capitol",
+      "archive_url": null,
+      "type": "news",
+      "key_facts": [
+        "Four Republicans signed immediately",
+        "Bipartisan support from Massie and Khanna",
+        "'This is not a hoax' - Marina Lacerda quote"
+      ]
+    },
+    {
+      "id": "abc-explainer",
+      "title": "What is a discharge petition and how it could force Epstein files release",
+      "outlet": "ABC News",
+      "author": "Political Unit",
+      "date": "2025-09-03",
+      "url": "https://abcnews.go.com/Politics/epstein-files-discharge-petition-explained/story",
+      "archive_url": null,
+      "type": "explainer",
+      "key_facts": [
+        "Explains discharge petition mechanics",
+        "Need 218 signatures to force floor vote",
+        "Bypasses committee and leadership control"
+      ]
+    },
+    {
+      "id": "house-clerk",
+      "title": "Discharge Petition No. 9 - 119th Congress",
+      "outlet": "House Clerk",
+      "author": "Office of the Clerk",
+      "date": "2025-09-03",
+      "url": "https://clerk.house.gov/DischargePetition/2025090209",
+      "archive_url": null,
+      "type": "official",
+      "key_facts": [
+        "Official signature count",
+        "Updated when House is in session",
+        "Primary source of truth"
+      ]
+    },
+    {
+      "id": "hr-4405",
+      "title": "H.R. 4405 - JFK-style disclosure framework",
+      "outlet": "Congress.gov",
+      "author": "119th Congress",
+      "date": "2025",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/4405/text",
+      "archive_url": null,
+      "type": "legislation",
+      "key_facts": [
+        "Automatic minor victim redaction",
+        "Independent review board",
+        "Presumption of disclosure"
+      ]
+    },
+    {
+      "id": "hres-581",
+      "title": "H.Res. 581 - Discharge rule vehicle",
+      "outlet": "Congress.gov",
+      "author": "119th Congress",
+      "date": "2025",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/581",
+      "archive_url": null,
+      "type": "legislation",
+      "key_facts": [
+        "Procedural mechanism for discharge",
+        "Forces floor vote if 218 sign",
+        "Bypasses committee process"
+      ]
+    },
+    {
+      "id": "johnson-july-closure",
+      "title": "House closes early for August recess amid discharge petition concerns",
+      "outlet": "Politico",
+      "author": "Congressional Reporter",
+      "date": "2025-07-25",
+      "url": "https://www.politico.com/news/2025/07/25/house-early-recess",
+      "archive_url": null,
+      "type": "news",
+      "key_facts": [
+        "Johnson closed House early in July",
+        "Avoided discharge petition deadline",
+        "Called it 'Democrat side shows'"
+      ]
+    }
+  ],
+  "metadata": {
+    "last_updated": "2025-09-04T23:45:00-05:00",
+    "verification_standard": "All sources verified through official records or mainstream news outlets",
+    "correction_policy": "Errors corrected within 24 hours via GitHub Issues"
+  }
+}

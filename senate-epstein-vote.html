@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senate Vote: Who Blocked Epstein Files Release - September 10, 2025</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <meta name="description" content="Complete record of how every US Senator voted on Chuck Schumer's amendment to release Jeffrey Epstein files on September 10, 2025. See who blocked transparency.">
+    <meta property="og:title" content="Senate Vote: Who Blocked Epstein Files Release - September 10, 2025">
+    <meta property="og:description" content="Complete record of how every US Senator voted on Chuck Schumer's amendment to release Jeffrey Epstein files. See who blocked transparency.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Senate Vote: Who Blocked Epstein Files Release">
+    <meta name="twitter:description" content="Complete record of how every US Senator voted on releasing Jeffrey Epstein files. See who blocked transparency.">
+    <style>
+        .vote-header {
+            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .vote-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .vote-header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .vote-summary {
+            background: white;
+            padding: 2rem;
+            margin: 1rem 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .vote-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .vote-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .vote-section.blocked {
+            border-left: 5px solid #dc2626;
+        }
+
+        .vote-section.supported {
+            border-left: 5px solid #059669;
+        }
+
+        .vote-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .vote-count {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .vote-count.blocked {
+            color: #dc2626;
+        }
+
+        .vote-count.supported {
+            color: #059669;
+        }
+
+        .senator-list {
+            margin-top: 1rem;
+        }
+
+        .senator-item {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border-radius: 8px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+        }
+
+        .senator-info {
+            flex: 1;
+        }
+
+        .senator-name {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .senator-state {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .senator-party {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 1rem;
+        }
+
+        .party-r {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+
+        .party-d {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+
+        .phone-link {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 1rem;
+        }
+
+        .phone-link:hover {
+            text-decoration: underline;
+        }
+
+        .heroes-section {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .heroes-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .heroes-list {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .hero-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-state {
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .back-link:hover {
+            background: #1a252f;
+        }
+
+        .context-box {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .context-box h4 {
+            color: #92400e;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .context-box p {
+            color: #78350f;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .vote-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .vote-breakdown {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .heroes-list {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .senator-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="vote-header">
+        <h1>Senate Vote: Who Blocked Epstein Files Release</h1>
+        <p>Complete record of the September 10, 2025 vote on Schumer's transparency amendment</p>
+    </div>
+
+    <div class="contact-container">
+        <a href="index.html" class="back-link">← Back to Main Tracker</a>
+
+        <div class="context-box">
+            <h4>📋 What Happened</h4>
+            <p>On September 10, 2025, Senate Minority Leader Chuck Schumer surprised Republicans by forcing a vote on an amendment to release all Jeffrey Epstein files within 30 days. The amendment was identical to the Massie-Khanna House resolution. Republicans called it a "political stunt" and a "hostile act" - the same language used against House petition signers.</p>
+        </div>
+
+        <div class="vote-summary">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #2d3748;">Final Vote: 51-49</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #4a5568; margin-bottom: 2rem;">
+                <strong>51 Senators voted to BLOCK transparency.</strong><br>
+                <strong>49 Senators voted to SUPPORT releasing the files.</strong>
+            </p>
+        </div>
+
+        <div class="heroes-section">
+            <h3>🎯 The Only 2 Republicans with Courage</h3>
+            <p>These Republican senators broke with their party leadership to support transparency and survivor justice:</p>
+            <div class="heroes-list">
+                <div class="hero-card">
+                    <div class="hero-name">Rand Paul</div>
+                    <div class="hero-state">Kentucky</div>
+                    <a href="tel:202-224-4343" style="color: white; text-decoration: none; background: rgba(255, 255, 255, 0.2); padding: 8px 16px; border-radius: 6px; font-weight: bold;">📞 (202) 224-4343</a>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-name">Josh Hawley</div>
+                    <div class="hero-state">Missouri</div>
+                    <a href="tel:202-224-6154" style="color: white; text-decoration: none; background: rgba(255, 255, 255, 0.2); padding: 8px 16px; border-radius: 6px; font-weight: bold;">📞 (202) 224-6154</a>
+                </div>
+            </div>
+            <p style="margin-top: 1.5rem; font-style: italic;">"I think we ought to release those files and trust the American people, just like we did with the MLK files and the JFK files." - Josh Hawley</p>
+        </div>
+
+        <div class="vote-breakdown">
+            <div class="vote-section blocked">
+                <div class="vote-count blocked">51</div>
+                <h3>Voted to BLOCK Transparency</h3>
+                <p style="color: #7f1d1d; font-weight: 500; margin-bottom: 1rem;">These Republican senators voted to prevent the release of Jeffrey Epstein files</p>
+                
+                <div class="senator-list">
+                    <p style="text-align: center; color: #6b7280; padding: 1rem; background: #f9fafb; border-radius: 8px; margin: 1rem 0;">
+                        <strong>49 GOP Senators</strong> voted to table Schumer's amendment<br>
+                        <em>This represents the vast majority of Republican senators choosing to protect powerful interests over transparency for survivors.</em>
+                    </p>
+                    
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <p style="color: #374151; font-weight: 500; margin-bottom: 0.5rem;">Key Leadership Who Blocked Transparency:</p>
+                        <div class="senator-item">
+                            <div class="senator-info">
+                                <div class="senator-name">John Thune</div>
+                                <div class="senator-state">South Dakota - Majority Leader</div>
+                            </div>
+                            <span class="senator-party party-r">R</span>
+                            <a href="tel:202-224-2321" class="phone-link">📞 (202) 224-2321</a>
+                        </div>
+                        <div class="senator-item">
+                            <div class="senator-info">
+                                <div class="senator-name">John Barrasso</div>
+                                <div class="senator-state">Wyoming - Majority Whip</div>
+                            </div>
+                            <span class="senator-party party-r">R</span>
+                            <a href="tel:202-224-6441" class="phone-link">📞 (202) 224-6441</a>
+                        </div>
+                        <div class="senator-item">
+                            <div class="senator-info">
+                                <div class="senator-name">Mitch McConnell</div>
+                                <div class="senator-state">Kentucky</div>
+                            </div>
+                            <span class="senator-party party-r">R</span>
+                            <a href="tel:202-224-2541" class="phone-link">📞 (202) 224-2541</a>
+                        </div>
+                        <div class="senator-item">
+                            <div class="senator-info">
+                                <div class="senator-name">Lindsey Graham</div>
+                                <div class="senator-state">South Carolina</div>
+                            </div>
+                            <span class="senator-party party-r">R</span>
+                            <a href="tel:202-224-5972" class="phone-link">📞 (202) 224-5972</a>
+                        </div>
+                        <div class="senator-item">
+                            <div class="senator-info">
+                                <div class="senator-name">Ted Cruz</div>
+                                <div class="senator-state">Texas</div>
+                            </div>
+                            <span class="senator-party party-r">R</span>
+                            <a href="tel:202-224-5922" class="phone-link">📞 (202) 224-5922</a>
+                        </div>
+                        
+                        <p style="margin-top: 1rem; font-style: italic; color: #6b7280;">
+                            + 44 other Republican senators voted to block transparency
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vote-section supported">
+                <div class="vote-count supported">49</div>
+                <h3>Voted to SUPPORT Transparency</h3>
+                <p style="color: #065f46; font-weight: 500; margin-bottom: 1rem;">These senators voted to release the Jeffrey Epstein files</p>
+                
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <p style="color: #374151; font-weight: 500;">All 47 Democrats + 2 Courageous Republicans</p>
+                </div>
+
+                <div class="senator-list">
+                    <h4 style="color: #059669; margin-bottom: 0.5rem;">Democratic Leadership Who Supported Transparency:</h4>
+                    <div class="senator-item">
+                        <div class="senator-info">
+                            <div class="senator-name">Chuck Schumer</div>
+                            <div class="senator-state">New York - Minority Leader</div>
+                        </div>
+                        <span class="senator-party party-d">D</span>
+                        <a href="tel:202-224-6542" class="phone-link">📞 (202) 224-6542</a>
+                    </div>
+                    <div class="senator-item">
+                        <div class="senator-info">
+                            <div class="senator-name">Dick Durbin</div>
+                            <div class="senator-state">Illinois - Minority Whip</div>
+                        </div>
+                        <span class="senator-party party-d">D</span>
+                        <a href="tel:202-224-2152" class="phone-link">📞 (202) 224-2152</a>
+                    </div>
+                    
+                    <p style="margin-top: 1rem; font-style: italic; color: #6b7280; text-align: center;">
+                        + All 45 other Democratic senators voted for transparency
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="context-box">
+            <h4>🏛️ The Bigger Picture</h4>
+            <p><strong>House Progress:</strong> The House discharge petition has 216 confirmed signatures + James Walkinshaw (VA-11) pledged = 217 total. Only 1 more Republican needed for a House vote.</p>
+            <p style="margin-top: 0.5rem;"><strong>Senate Message:</strong> This Senate vote shows Democratic leadership at the highest levels supports transparency, while most Republicans protect powerful interests over survivor justice.</p>
+            <p style="margin-top: 0.5rem;"><strong>Call to Action:</strong> Contact the senators who blocked transparency and ask them why they're protecting files that survivors are begging to see.</p>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <h3 style="color: #374151; margin-bottom: 1rem;">Take Action</h3>
+            <p style="margin-bottom: 1.5rem; color: #6b7280;">Use the phone numbers above to contact senators who blocked transparency. Ask them to explain their vote to survivors.</p>
+            <a href="index.html" class="back-link">View House Tracker →</a>
+            <a href="all-representatives.html" class="back-link" style="margin-left: 1rem;">View All House Reps →</a>
+        </div>
+    </div>
+
+    <script>
+        // Add hover effects for senator items
+        document.querySelectorAll('.senator-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+                this.style.transform = 'translateY(-1px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '';
+                this.style.transform = '';
+            });
+        });
+    </script>
+</body>
+</html>
